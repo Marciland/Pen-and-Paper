@@ -1,2 +1,2 @@
-# dsa5
-Tool zum Online spielen von DSA 5
+# Das Schwarze Auge 5 Tools
+Tools Sammlung um Charaktere zu erstellen, Abenteuer zu planen oder Online zu spielen.
