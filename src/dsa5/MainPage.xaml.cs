@@ -2,23 +2,34 @@
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
 
 	public MainPage()
 	{
 		InitializeComponent();
 	}
 
-	private void OnCounterClicked(object sender, EventArgs e)
+	private void CreateNewHero(object sender, EventArgs e) 
 	{
-		count++;
 
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
+    }
 
-		SemanticScreenReader.Announce(CounterBtn.Text);
+	private void EditHero(object sender, EventArgs e)
+	{ 
+
 	}
+
+    private void PlayAdventure(object sender, EventArgs e)
+    {
+
+    }
+    private void Options(object sender, EventArgs e)
+    {
+
+    }
+    private void Quit(object sender, EventArgs e)
+    {
+
+    }
+
 }
 

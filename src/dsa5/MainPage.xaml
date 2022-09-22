@@ -9,31 +9,60 @@
             Padding="30,0"
             VerticalOptions="Center">
 
+            <Label
+                Text="Willkommen Abenteuerer!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="PlayAdventureButton"
+                Text="Abenteuer spielen"
+                Clicked="PlayAdventure"
+                FontSize="18"
+                HorizontalOptions="Center" />
+            
+            <Button
+                x:Name="EditHeroButton"
+                Text="Helden bearbeiten"
+                Clicked="EditHero"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="CreateHeroButton"
+                Text="neuen Helden erstellen"
+                Clicked="CreateNewHero"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="OptionsButton"
+                Text="Optionen"
+                Clicked="Options"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Button
+                x:Name="QuitButton"
+                Text="Beenden"
+                Clicked="Quit"
+                FontSize="18"
+                HorizontalOptions="Center" />
+            
+            <!--
             <Image
                 Source="dotnet_bot.png"
                 SemanticProperties.Description="Cute dot net bot waving hi to you!"
                 HeightRequest="200"
                 HorizontalOptions="Center" />
-
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
             <Label
                 Text="Welcome to .NET Multi-platform App UI"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I"
                 FontSize="18"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center" />      
+            -->
 
         </VerticalStackLayout>
     </ScrollView>
