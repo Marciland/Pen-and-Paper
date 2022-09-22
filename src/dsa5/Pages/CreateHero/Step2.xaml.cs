@@ -15,7 +15,7 @@ public partial class Step2 : ContentPage
 
     private void Back(object sender, EventArgs e)
     {
-
+        Navigation.PopAsync();
     }
 
 }
