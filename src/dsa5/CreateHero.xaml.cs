@@ -11,4 +11,9 @@ public partial class CreateHero : ContentPage
     {
         
     }
+
+    private void Back(object sender, EventArgs e)
+    {
+
+    }
 }
