@@ -1,4 +1,4 @@
-﻿namespace dsa5;
+﻿namespace dsa5.Pages;
 
 public partial class App : Application
 {
@@ -8,4 +8,5 @@ public partial class App : Application
 
         MainPage = new NavigationPage(new MainPage());
     }
+
 }

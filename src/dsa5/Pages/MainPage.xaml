@@ -2,9 +2,10 @@
 <ContentPage NavigationPage.HasNavigationBar="False"
              xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="dsa5.MainPage">
+             x:Class="dsa5.Pages.MainPage">
 
     <ScrollView>
+        
         <VerticalStackLayout
             Spacing="25"
             Padding="30,0"
@@ -52,6 +53,7 @@
                 HorizontalOptions="Center"/>
 
         </VerticalStackLayout>
+        
     </ScrollView>
 
 </ContentPage>

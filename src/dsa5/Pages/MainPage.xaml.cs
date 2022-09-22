@@ -1,4 +1,4 @@
-﻿namespace dsa5;
+﻿namespace dsa5.Pages;
 
 public partial class MainPage : ContentPage
 {
@@ -13,7 +13,7 @@ public partial class MainPage : ContentPage
 
 	private void CreateNewHero(object sender, EventArgs e) 
 	{
-        Navigation.PushAsync(new Step1());
+        Navigation.PushAsync(new CreateHero.Step1());
     }
 
 	private void EditHero(object sender, EventArgs e)
@@ -35,4 +35,3 @@ public partial class MainPage : ContentPage
     }
 
 }
-

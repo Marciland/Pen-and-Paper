@@ -1,7 +1,8 @@
-namespace dsa5;
+namespace dsa5.Pages.CreateHero;
 
 public partial class Step1 : ContentPage
 {
+
 	public Step1()
 	{
 		InitializeComponent();
@@ -16,4 +17,5 @@ public partial class Step1 : ContentPage
     {
 
     }
+
 }
