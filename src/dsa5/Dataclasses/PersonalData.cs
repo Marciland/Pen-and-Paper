@@ -8,7 +8,7 @@ public class PersonalData
     public string hairColor;
     public string eyeColor;
     public double height;
-    public double weight;
+    public int weight;
     public string socialStatus;
     public string origin;
 }

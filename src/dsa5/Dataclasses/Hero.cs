@@ -4,8 +4,8 @@ public class Hero
 {
     public string name;
     public PersonalData personalData;
-    public Level level;
+    public string level;
     public Attribute attributes;
-    public List<Spell> spells;
+    public List<string> spells;
 
 }
