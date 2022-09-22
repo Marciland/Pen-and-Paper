@@ -13,7 +13,7 @@ public partial class MainPage : ContentPage
 
 	private void CreateNewHero(object sender, EventArgs e) 
 	{
-        Navigation.PushAsync(new CreateHero());
+        Navigation.PushAsync(new Step1());
     }
 
 	private void EditHero(object sender, EventArgs e)

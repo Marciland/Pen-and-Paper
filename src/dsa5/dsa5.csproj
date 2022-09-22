@@ -7,10 +7,11 @@
 		<RootNamespace>dsa5</RootNamespace>
 		<UseMaui>true</UseMaui>
 		<SingleProject>true</SingleProject>
+		<DefaultLanguage>de-de</DefaultLanguage>
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<ApplicationTitle>dsa5</ApplicationTitle>
-		<ApplicationId>com.companyname.dsa5</ApplicationId>
+		<ApplicationId>de.marciland.dsa5</ApplicationId>
 		<ApplicationIdGuid>ca7b9f2d-b2bd-4227-88b3-8c1311286bb7</ApplicationIdGuid>
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
 		<ApplicationVersion>1</ApplicationVersion>
@@ -21,7 +22,6 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
-		<DefaultLanguage>de-de</DefaultLanguage>
 	</PropertyGroup>
 
 	<ItemGroup>

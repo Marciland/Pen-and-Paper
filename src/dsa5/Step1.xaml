@@ -3,8 +3,8 @@
              NavigationPage.HasBackButton="False"
              xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="dsa5.CreateHero"
-             Title="CreateHero">
+             x:Class="dsa5.Step1"
+             Title="CreateHero-Step 1">
 
     <ScrollView>
         

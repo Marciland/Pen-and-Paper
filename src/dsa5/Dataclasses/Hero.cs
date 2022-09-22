@@ -6,6 +6,7 @@ public class Hero
     public PersonalData personalData;
     public string level;
     public Attribute attributes;
+    public string species;
     public List<string> spells;
 
 }

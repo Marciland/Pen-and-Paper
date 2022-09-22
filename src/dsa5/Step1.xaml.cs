@@ -1,8 +1,8 @@
 namespace dsa5;
 
-public partial class CreateHero : ContentPage
+public partial class Step1 : ContentPage
 {
-	public CreateHero()
+	public Step1()
 	{
 		InitializeComponent();
     }
