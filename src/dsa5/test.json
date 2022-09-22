@@ -1,0 +1,30 @@
+{
+	"name": "test",
+	"personaldata":
+	{
+		"gender": "male",
+		"birthdate": "tt-mm-yyyy",
+		"age": 18,
+		"haircolor": "black",
+		"eyecolor": "brown",
+		"height": 1.75,
+		"socialstatus": "free",
+		"origin": "testlocation"
+	},
+	"level":"noob",
+	"attributes":
+	{
+		"courage": 5,
+		"cleverness": 3,
+		"intuition": 6,
+		"charisma": 3,
+		"dexterity": 4,
+		"agility": 5,
+		"constitution": 2,
+		"strength": 6
+	},
+	"spells":
+	[
+		"testspell", "testspell2"
+	]
+}
