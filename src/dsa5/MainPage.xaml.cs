@@ -5,12 +5,15 @@ public partial class MainPage : ContentPage
 
 	public MainPage()
 	{
-		InitializeComponent();
-	}
+        InitializeComponent();
+    }
+
+    //note for myself:
+    //sender is used to know which button called the method if for example multiple buttons use the same method
 
 	private void CreateNewHero(object sender, EventArgs e) 
 	{
-
+        Navigation.PushAsync(new CreateHero());
     }
 
 	private void EditHero(object sender, EventArgs e)

@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+<ContentPage NavigationPage.HasNavigationBar="False"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="dsa5.MainPage">
 
@@ -12,57 +13,43 @@
             <Label
                 Text="Willkommen Abenteuerer!"
                 SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
+                FontSize="26"
+                HorizontalOptions="Center"/>
 
             <Button
                 x:Name="PlayAdventureButton"
                 Text="Abenteuer spielen"
                 Clicked="PlayAdventure"
                 FontSize="18"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center"/>
             
             <Button
                 x:Name="EditHeroButton"
-                Text="Helden bearbeiten"
+                Text="Held bearbeiten"
                 Clicked="EditHero"
                 FontSize="18"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center"/>
 
             <Button
                 x:Name="CreateHeroButton"
-                Text="neuen Helden erstellen"
+                Text="Held erstellen"
                 Clicked="CreateNewHero"
                 FontSize="18"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center"/>
 
             <Button
                 x:Name="OptionsButton"
                 Text="Optionen"
                 Clicked="Options"
                 FontSize="18"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center"/>
 
             <Button
                 x:Name="QuitButton"
                 Text="Beenden"
                 Clicked="Quit"
                 FontSize="18"
-                HorizontalOptions="Center" />
-            
-            <!--
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />      
-            -->
+                HorizontalOptions="Center"/>
 
         </VerticalStackLayout>
     </ScrollView>

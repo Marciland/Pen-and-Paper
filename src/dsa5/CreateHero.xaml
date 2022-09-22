@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage NavigationPage.HasNavigationBar="False" 
+             NavigationPage.BackButtonTitle="Hallo"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="dsa5.CreateHero"
+             Title="CreateHero">
+
+    <ScrollView>
+        <VerticalStackLayout
+             Spacing="25"
+             Padding="30,0"
+             VerticalOptions="Center">
+            
+            <Label 
+                Text="Schritt 1:"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                FontSize="26"/>
+
+            <Label 
+                Text="Was für einen Helden möchtest du spielen?"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
+
+            <Label 
+                Text="Verschaffe dir einen Überblick über die möglichen Professionen oder kläre mit deinem Spielleiter, ob eine eigens erstellte Profession möglich ist."
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
+
+            <Label 
+                Text="Schreibe dir eine Hintergrundgeschichte zu deinem Helden auf und versuche dich einem fremden in Aventurien vorzustellen."
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"/>
+
+            <Button
+                x:Name="ContinueButton"
+                Text="Weiter"
+                Clicked="Continue"
+                HorizontalOptions="Center"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
