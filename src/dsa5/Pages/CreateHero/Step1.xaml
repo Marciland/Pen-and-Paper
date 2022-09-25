@@ -15,25 +15,21 @@
             
             <Label 
                 Text="Schritt 1:"
-                VerticalOptions="Center" 
                 HorizontalOptions="Center"
                 FontSize="26"/>
 
             <Label 
                 Text="Was für einen Helden möchtest du spielen?"
-                VerticalOptions="Center" 
                 HorizontalOptions="Center"
                 FontSize="18"/>
 
             <Label 
                 Text="Verschaffe dir einen Überblick über die möglichen Professionen oder kläre mit deinem Spielleiter, ob eine eigens erstellte Profession möglich ist."
-                VerticalOptions="Center" 
                 HorizontalOptions="Center"
                 FontSize="18"/>
 
             <Label 
                 Text="Schreibe dir eine Hintergrundgeschichte zu deinem Helden auf und versuche dich einem fremden in Aventurien vorzustellen."
-                VerticalOptions="Center" 
                 HorizontalOptions="Center"
                 FontSize="18"/>
 
@@ -44,14 +40,12 @@
                 <Button
                     x:Name="ContinueButton"
                     Text="Weiter"
-                    Clicked="Continue"
-                    HorizontalOptions="Center"/>
+                    Clicked="Continue"/>
 
                 <Button
                     x:Name="BackButton"
                     Text="Zurück"
-                    Clicked="Back"
-                    HorizontalOptions="Center"/>
+                    Clicked="Back"/>
 
             </HorizontalStackLayout>
             

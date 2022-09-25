@@ -15,32 +15,27 @@
 
             <Label 
                 Text="Schritt 2:"
-                VerticalOptions="Center" 
                 HorizontalOptions="Center"
                 FontSize="26"/>
 
             <Label
                 Text="Wähle den Erfahrungsgrad (EG) mit dem dein Held einsteigen soll. Stimme dich hierfür mit deiner Gruppe ab."
-                VerticalOptions="Center" 
                 HorizontalOptions="Center"
                 FontSize="18"/>
             
             <Label
                 Text="(Häufig gibt der Spielleiter den EG für die Gruppe vor)"
-                VerticalOptions="Center" 
                 HorizontalOptions="Center"
                 FontSize="18"/>
 
             <Label
                 Text="Der EG bestimmt die Maximalwerte und das Alter des Helden."
-                VerticalOptions="Center" 
                 HorizontalOptions="Center"
                 FontSize="18"/>
 
             <Picker
                 x:Name="LevelPicker"
                 Title="Wähle einen EG"
-                VerticalOptions="Center" 
                 HorizontalOptions="Center"/>
 
             <HorizontalStackLayout
@@ -50,14 +45,12 @@
                 <Button
                     x:Name="ContinueButton"
                     Text="Weiter"
-                    Clicked="Continue"
-                    HorizontalOptions="Center"/>
+                    Clicked="Continue"/>
 
                 <Button
                     x:Name="BackButton"
                     Text="Zurück"
-                    Clicked="Back"
-                    HorizontalOptions="Center"/>
+                    Clicked="Back"/>
 
             </HorizontalStackLayout>
 

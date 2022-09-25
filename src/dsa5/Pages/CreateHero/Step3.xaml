@@ -14,25 +14,26 @@
              Padding="30,0"
              VerticalOptions="Center">
 
+            <Label
+                x:Name="APBudget"
+                HorizontalOptions="End"
+                FontSize="26"/>
+
             <Label 
                 Text="Schritt 3:"
-                VerticalOptions="Center" 
                 HorizontalOptions="Center"
                 FontSize="26"/>
 
             <Label 
                 Text="?"
-                VerticalOptions="Center" 
                 HorizontalOptions="Center"/>
 
             <Label 
                 Text="."
-                VerticalOptions="Center" 
                 HorizontalOptions="Center"/>
 
             <Label 
                 Text="."
-                VerticalOptions="Center" 
                 HorizontalOptions="Center"/>
 
             <HorizontalStackLayout
@@ -42,14 +43,12 @@
                 <Button
                     x:Name="ContinueButton"
                     Text="Weiter"
-                    Clicked="Continue"
-                    HorizontalOptions="Center"/>
+                    Clicked="Continue"/>
 
                 <Button
                     x:Name="BackButton"
                     Text="Zurück"
-                    Clicked="Back"
-                    HorizontalOptions="Center"/>
+                    Clicked="Back"/>
 
             </HorizontalStackLayout>
 

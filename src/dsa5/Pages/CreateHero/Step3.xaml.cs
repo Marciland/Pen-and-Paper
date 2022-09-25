@@ -5,7 +5,7 @@ public partial class Step3 : ContentPage
 	public Step3(Dataclasses.Level level)
 	{
 		InitializeComponent();
-		Console.WriteLine(level.name);
+        APBudget.Text = $"AP-Konto: {level.APTotal}";
 	}
 
     private void Continue(object sender, EventArgs e)
