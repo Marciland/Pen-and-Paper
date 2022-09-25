@@ -10,7 +10,7 @@ public partial class Step3 : ContentPage
 	{
         _level = level;
 		InitializeComponent();
-        APBudget.Text = $"AP-Konto: {level.APTotal}";
+        APBudget.Text = $"AP-Konto: {level.APAvailable}";
         SpeciesPicker.ItemsSource = Species.GetSpecies();
         SpeciesPicker.SelectedIndex = 0;
 	}
@@ -20,7 +20,7 @@ public partial class Step3 : ContentPage
         Species selectedSpecies = (Species)SpeciesPicker.SelectedItem;
         Level newLevel = new() { name = _level.name, APTotal = _level.APTotal, APAvailable = _level.APAvailable - selectedSpecies.AP,
                                               APSpent = _level.APSpent + selectedSpecies.AP, maxAttribute = _level.maxAttribute, maxSkill = _level.maxSkill, maxCombatSkill = _level.maxCombatSkill,
-                                              maxAttributeTotal = _level.maxAttributeTotal, maxSpells = _level.maxSpells, maxForeignSpells = _level.maxForeignSpells }; 
+                                              maxAttributeTotal = _level.maxAttributeTotal, maxSpells = _level.maxSpells, maxForeignSpells = _level.maxForeignSpells };
         //Navigation.PushAsync(new Step4(selectedSpecies, newLevel));
     }
 
