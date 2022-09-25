@@ -45,13 +45,6 @@
                 FontSize="18"
                 HorizontalOptions="Center"/>
 
-            <Button
-                x:Name="QuitButton"
-                Text="Beenden"
-                Clicked="Quit"
-                FontSize="18"
-                HorizontalOptions="Center"/>
-
         </VerticalStackLayout>
         
     </ScrollView>

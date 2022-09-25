@@ -29,9 +29,5 @@ public partial class MainPage : ContentPage
     {
         //Navigation.PushAsync(new Options());
     }
-    private void Quit(object sender, EventArgs e)
-    {
-        //is this needed?
-    }
 
 }
