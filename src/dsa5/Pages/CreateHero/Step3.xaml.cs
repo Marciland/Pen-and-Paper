@@ -6,6 +6,8 @@ public partial class Step3 : ContentPage
 	{
 		InitializeComponent();
         APBudget.Text = $"AP-Konto: {level.APTotal}";
+        SpeciesPicker.ItemsSource = Dataclasses.Species.GetSpecies();
+        SpeciesPicker.SelectedIndex = 0;
 	}
 
     private void Continue(object sender, EventArgs e)

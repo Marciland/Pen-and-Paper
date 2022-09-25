@@ -20,7 +20,7 @@ public class Level
 
     public static List<Level> GetLevels() 
     {
-        List<Level> possibleLevel = new()
+        return new List<Level>
         {
             new Level { name = "Unerfahren",       APTotal = 900,  APAvailable = 900,  APSpent = 0, maxAttribute = 12, maxSkill = 10, maxCombatSkill = 8,  maxAttributeTotal = 95,  maxSpells = 8,  maxForeignSpells = 0 },
             new Level { name = "Durchschnittlich", APTotal = 1000, APAvailable = 1000, APSpent = 0, maxAttribute = 13, maxSkill = 10, maxCombatSkill = 10, maxAttributeTotal = 98,  maxSpells = 10, maxForeignSpells = 1 },
@@ -30,7 +30,6 @@ public class Level
             new Level { name = "Brilliant",        APTotal = 1700, APAvailable = 1700, APSpent = 0, maxAttribute = 17, maxSkill = 19, maxCombatSkill = 18, maxAttributeTotal = 109, maxSpells = 18, maxForeignSpells = 5 },
             new Level { name = "Legendär",         APTotal = 2100, APAvailable = 2100, APSpent = 0, maxAttribute = 18, maxSkill = 20, maxCombatSkill = 20, maxAttributeTotal = 114, maxSpells = 20, maxForeignSpells = 6 }
         };
-        return possibleLevel;
     }
 
 }

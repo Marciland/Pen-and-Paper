@@ -6,7 +6,6 @@
              x:Class="dsa5.Pages.CreateHero.Step3"
              Title="CreateHero-Step3">
 
-
     <ScrollView>
 
         <VerticalStackLayout
@@ -25,17 +24,23 @@
                 FontSize="26"/>
 
             <Label 
-                Text="?"
+                Text="Wähle deine Spezies. Diese entscheidet über dein Aussehen, Grundwerte und Attribute."
                 HorizontalOptions="Center"/>
 
             <Label 
-                Text="."
+                Text="(Achtung! Untypische Vor- und Nachteile, sowie unübliche Kulturen zu der Spezies bedürfen einer Absprache mit dem Spielleiter)"
                 HorizontalOptions="Center"/>
 
-            <Label 
-                Text="."
-                HorizontalOptions="Center"/>
+            <HorizontalStackLayout
+                Spacing="25"
+                HorizontalOptions="Center">
 
+                <Picker
+                    x:Name="SpeciesPicker"
+                    Title="Wähle eine Spezies"/>
+                
+            </HorizontalStackLayout>
+            
             <HorizontalStackLayout
                 Spacing="25"
                 HorizontalOptions="Center">
