@@ -34,7 +34,7 @@
             <Button
                 x:Name="CreateHeroButton"
                 Text="Held erstellen"
-                Clicked="CreateNewHero"
+                Clicked="CreateHero"
                 FontSize="18"
                 HorizontalOptions="Center"/>
 
