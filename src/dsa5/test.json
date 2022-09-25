@@ -1,7 +1,6 @@
 {
 	"name": "test",
-	"personaldata":
-	{
+	"personaldata": {
 		"gender": "male",
 		"birthdate": "tt-mm-yyyy",
 		"age": 18,
@@ -11,9 +10,19 @@
 		"socialstatus": "free",
 		"origin": "testlocation"
 	},
-	"level":"noob",
-	"attributes":
-	{
+	"level": {
+		"name": "bla",
+		"aptotal": 200,
+		"apavailable": 300,
+		"apspent": 100,
+		"maxattribute": 11,
+		"maxskill": 10,
+		"maxcombatskill": 111,
+		"maxattributetotal": 102,
+		"maxspells": 12,
+		"maxforeignspells": 1
+	},
+	"attributes": {
 		"courage": 5,
 		"cleverness": 3,
 		"intuition": 6,
@@ -23,8 +32,8 @@
 		"constitution": 2,
 		"strength": 6
 	},
-	"spells":
-	[
-		"testspell", "testspell2"
+	"spells": [
+		"testspell",
+		"testspell2"
 	]
 }
