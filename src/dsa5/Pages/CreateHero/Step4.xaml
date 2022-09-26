@@ -72,13 +72,15 @@
                             x:Name="LanguagesLabel"
                             FontSize="16"
                             Grid.Column="0"
-                            Grid.Row="0"/>
+                            Grid.Row="0"
+                            HorizontalOptions="Center"/>
 
                         <Label
                             x:Name="SocialStatusLabel"
                             FontSize="16"
                             Grid.Column="1"
-                            Grid.Row="0"/>
+                            Grid.Row="0"
+                            HorizontalOptions="Center"/>
 
                         <!--Checkbox-->
 
@@ -90,10 +92,19 @@
                             HorizontalOptions="Center"/>
 
                         <Label
-                            x:Name="SkillsLabel"
+                            Text="Talente durch das Kulturpaket:"
                             FontSize="16"
                             Grid.Column="0"
                             Grid.Row="2"
+                            Grid.ColumnSpan="2"
+                            HorizontalOptions="Center"/>
+                        
+                        <Label
+                            x:Name="SkillsLabel"
+                            LineBreakMode="WordWrap"
+                            FontSize="16"
+                            Grid.Column="0"
+                            Grid.Row="3"
                             Grid.ColumnSpan="2"
                             HorizontalOptions="Center"/>
 

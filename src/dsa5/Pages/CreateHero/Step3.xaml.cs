@@ -43,7 +43,10 @@ public partial class Step3 : ContentPage
             {
                 PerkLabel.Text += $"{perk.name}, ";
             }
-            PerkLabel.Text = PerkLabel.Text.Remove(PerkLabel.Text.Length-2);
+            if(selectedSpecies.perks.Count != 0)
+            {
+                PerkLabel.Text = PerkLabel.Text.Remove(PerkLabel.Text.Length - 2);
+            }
         
         }
 
