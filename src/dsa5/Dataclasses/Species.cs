@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace dsa5.Dataclasses
+﻿namespace dsa5.Dataclasses
 {
     public class Species
     {
@@ -15,7 +13,7 @@ namespace dsa5.Dataclasses
 
         public override string ToString()
         {
-            return name;
+            return $"{name} ({AP}AP)";
         }
 
         public static List<Species> GetSpecies()

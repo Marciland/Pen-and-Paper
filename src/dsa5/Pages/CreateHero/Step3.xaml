@@ -16,7 +16,7 @@
             <Label
                 x:Name="APBudget"
                 HorizontalOptions="End"
-                FontSize="26"/>
+                FontSize="20"/>
 
             <Label 
                 Text="Schritt 3:"
@@ -25,20 +25,88 @@
 
             <Label 
                 Text="Wähle deine Spezies. Diese entscheidet über dein Aussehen, Grundwerte und Attribute."
-                HorizontalOptions="Center"/>
+                HorizontalOptions="Center"
+                FontSize="18"/>
 
             <Label 
                 Text="(Achtung! Untypische Vor- und Nachteile, sowie unübliche Kulturen zu der Spezies bedürfen einer Absprache mit dem Spielleiter)"
-                HorizontalOptions="Center"/>
+                HorizontalOptions="Center"
+                FontSize="18"/>
 
             <HorizontalStackLayout
                 Spacing="25"
-                HorizontalOptions="Center">
+                HorizontalOptions="Center"
+                VerticalOptions="Center">
 
                 <Picker
                     x:Name="SpeciesPicker"
-                    Title="Wähle eine Spezies"/>
+                    SelectedIndexChanged="OnSpeciesPickerSelectedIndexChanged"
+                    Title="Wähle eine Spezies"
+                    FontSize="16"/>
+
+                <Border
+                    Padding="10">
                 
+                <Grid
+                    RowSpacing="5"
+                    ColumnSpacing="10">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label
+                        x:Name="LELabel"
+                        FontSize="16"
+                        Grid.Column="0"
+                        Grid.Row="0"/>
+
+                    <Label
+                        x:Name="SKLabel"
+                        FontSize="16"
+                        Grid.Column="1"
+                        Grid.Row="0"/>
+
+                    <Label
+                        x:Name="ZKLabel"
+                        FontSize="16"
+                        Grid.Column="0"
+                        Grid.Row="1"/>
+
+                    <Label
+                        x:Name="GSLabel"
+                        FontSize="16"
+                        Grid.Column="1"
+                        Grid.Row="1"/>
+
+                    <Label
+                        x:Name="AttributeLabel"
+                        FontSize="16"
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        Grid.ColumnSpan="2"
+                        HorizontalOptions="Center"/>
+
+                    <Label
+                        x:Name="PerkLabel"
+                        FontSize="16"
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        Grid.ColumnSpan="2"
+                        HorizontalOptions="Center"/>
+
+                </Grid>
+
+                </Border>
+
             </HorizontalStackLayout>
             
             <HorizontalStackLayout

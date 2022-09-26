@@ -24,6 +24,31 @@ public partial class Step3 : ContentPage
         //Navigation.PushAsync(new Step4(selectedSpecies, newLevel));
     }
 
+    void OnSpeciesPickerSelectedIndexChanged(object sender, EventArgs e)
+    {
+        var picker = (Picker)sender;
+
+        if (picker.SelectedIndex != -1)
+        {
+            Species selectedSpecies = (Species)picker.SelectedItem;
+
+            APBudget.Text = $"AP-Konto: {_level.APAvailable - selectedSpecies.AP}";
+            LELabel.Text = $"Lebensenergie-Grundwert (LE): {selectedSpecies.LE}";
+            SKLabel.Text = $"Seelenkraft-Grundwert (SK): {selectedSpecies.SK}";
+            ZKLabel.Text = $"Zähigkeit-Grundwert (ZK): {selectedSpecies.ZK}";
+            GSLabel.Text = $"Geschwindigkeit-Grundwert (GS): {selectedSpecies.GS}";
+            AttributeLabel.Text = selectedSpecies.attributes;
+            PerkLabel.Text = "Vorteile: ";
+            foreach (Perk perk in selectedSpecies.perks)
+            {
+                PerkLabel.Text += $"{perk.name}, ";
+            }
+            PerkLabel.Text = PerkLabel.Text.Remove(PerkLabel.Text.Length-2);
+        
+        }
+
+    }
+
     private void Back(object sender, EventArgs e)
     {
         Navigation.PopAsync();

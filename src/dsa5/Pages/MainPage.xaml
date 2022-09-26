@@ -38,12 +38,12 @@
                 FontSize="18"
                 HorizontalOptions="Center"/>
 
-            <Button
+            <!--<Button
                 x:Name="OptionsButton"
                 Text="Optionen"
                 Clicked="Options"
                 FontSize="18"
-                HorizontalOptions="Center"/>
+                HorizontalOptions="Center"/>-->
 
         </VerticalStackLayout>
         
