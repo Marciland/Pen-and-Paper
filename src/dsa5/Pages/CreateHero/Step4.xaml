@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage NavigationPage.HasNavigationBar="False" 
+             NavigationPage.HasBackButton="False"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="dsa5.Pages.CreateHero.Step4"
+             Title="CreateHero-Step4">
+
+    <ScrollView>
+
+        <VerticalStackLayout
+             Spacing="25"
+             Padding="30,0"
+             VerticalOptions="Center">
+
+            <Label
+                x:Name="APBudget"
+                HorizontalOptions="End"
+                FontSize="20"/>
+
+            <Label 
+                Text="Schritt 4:"
+                HorizontalOptions="Center"
+                FontSize="26"/>
+
+            <Label 
+                Text="Wähle deine Kultur. Diese entscheidet über Bräuche, Kleidung und Weltsicht des Helden. Weiterhin lernt der Held die passende Sprache und Ortskenntnis."
+                HorizontalOptions="Center"
+                FontSize="18"/>
+
+            <Label 
+                Text="(Eine für die Spezies unübliche Kultur erfordert eine Absprache mit dem Spielleiter)"
+                HorizontalOptions="Center"
+                FontSize="18"/>
+
+            <Label 
+                Text="Optional kann ein Kulturpaket gewählt werden. Dieses kostet AP und enthält zur Kultur passende Talente."
+                HorizontalOptions="Center"
+                FontSize="18"/>
+
+            <HorizontalStackLayout
+                Spacing="25"
+                HorizontalOptions="Center"
+                VerticalOptions="Center">
+
+                <Picker
+                    x:Name="CulturePicker"
+                    SelectedIndexChanged="OnCulturePickerSelectedIndexChanged"
+                    Title="Wähle eine Kultur"
+                    FontSize="16"/>
+
+                <Border
+                    Padding="10">
+
+                    <Grid
+                        RowSpacing="5"
+                        ColumnSpacing="10">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label
+                            x:Name="LanguagesLabel"
+                            FontSize="16"
+                            Grid.Column="0"
+                            Grid.Row="0"/>
+
+                        <Label
+                            x:Name="SocialStatusLabel"
+                            FontSize="16"
+                            Grid.Column="1"
+                            Grid.Row="0"/>
+
+                        <!--Checkbox-->
+
+                        <Label
+                            x:Name="APLabel"
+                            FontSize="16"
+                            Grid.Column="1"
+                            Grid.Row="1"
+                            HorizontalOptions="Center"/>
+
+                        <Label
+                            x:Name="SkillsLabel"
+                            FontSize="16"
+                            Grid.Column="0"
+                            Grid.Row="2"
+                            Grid.ColumnSpan="2"
+                            HorizontalOptions="Center"/>
+
+                    </Grid>
+
+                </Border>
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                Spacing="25"
+                HorizontalOptions="Center">
+
+                <Button
+                    x:Name="ContinueButton"
+                    Text="Weiter"
+                    Clicked="Continue"/>
+
+                <Button
+                    x:Name="BackButton"
+                    Text="Zurück"
+                    Clicked="Back"/>
+
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>

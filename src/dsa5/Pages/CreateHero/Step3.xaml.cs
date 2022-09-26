@@ -21,7 +21,7 @@ public partial class Step3 : ContentPage
         Level newLevel = new() { name = _level.name, APTotal = _level.APTotal, APAvailable = _level.APAvailable - selectedSpecies.AP,
                                               APSpent = _level.APSpent + selectedSpecies.AP, maxAttribute = _level.maxAttribute, maxSkill = _level.maxSkill, maxCombatSkill = _level.maxCombatSkill,
                                               maxAttributeTotal = _level.maxAttributeTotal, maxSpells = _level.maxSpells, maxForeignSpells = _level.maxForeignSpells };
-        //Navigation.PushAsync(new Step4(selectedSpecies, newLevel));
+        Navigation.PushAsync(new Step4(selectedSpecies, newLevel));
     }
 
     void OnSpeciesPickerSelectedIndexChanged(object sender, EventArgs e)
