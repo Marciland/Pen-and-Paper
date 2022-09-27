@@ -4,20 +4,28 @@ namespace dsa5.Pages.CreateHero;
 
 public partial class Step4 : ContentPage
 {
+    private readonly int remainingAP = 0;
+    private int selectedCulturePackCost = 0;
+    private Species _species;
+    private Level _level;
+
 	public Step4(Species species, Level level)
 	{
+        _species = species;
+        _level = level;
+        remainingAP = level.APAvailable;
 		InitializeComponent();
-        APBudget.Text = $"AP-Konto: {level.APAvailable}";
+        APBudget.Text = $"AP-Konto: {remainingAP}";
         CulturePicker.ItemsSource = Culture.GetCultures();
         CulturePicker.SelectedIndex = 0;
     }
 
     private void Continue(object sender, EventArgs e)
     {
-        
+        //Navigation.PushAsync(new Step5(selectedCulture, _species, _level));
     }
 
-    void OnCulturePickerSelectedIndexChanged(object sender, EventArgs e)
+    private void OnCulturePickerSelectedIndexChanged(object sender, EventArgs e)
     {
         var picker = (Picker)sender;
 
@@ -29,20 +37,22 @@ public partial class Step4 : ContentPage
             SocialStatusLabel.Text = "Sozialer Status: ";
             foreach (string status in selectedCulture.socialStatus)
             {
-                SocialStatusLabel.Text += $"{status}, ";
+                SocialStatusLabel.Text += $"{status} oder ";
             }
             if(selectedCulture.socialStatus.Count != 0)
             {
-                SocialStatusLabel.Text = SocialStatusLabel.Text.Remove(SocialStatusLabel.Text.Length - 2);
+                SocialStatusLabel.Text = SocialStatusLabel.Text.Remove(SocialStatusLabel.Text.Length - 6);
             }
+            CulturePackCheckBox.IsChecked = false;
             APLabel.Text = $"Kulturpaket Kosten: {selectedCulture.AP}";
+            selectedCulturePackCost = selectedCulture.AP;
             SkillsLabel.Text = "";
             int linebreakCounter = 0;
             foreach (string skill in selectedCulture.skills)
             {
                 SkillsLabel.Text += $"{skill}, ";
                 linebreakCounter++;
-                if(linebreakCounter % 4 == 0)
+                if(linebreakCounter % 3 == 0)
                 {
                     SkillsLabel.Text += "\n";
                 }
@@ -54,6 +64,12 @@ public partial class Step4 : ContentPage
 
         }
 
+    }
+
+    private void OnCulturePackCheckBoxChanged(object sender, EventArgs e)
+    {
+        if (CulturePackCheckBox.IsChecked == true)  APBudget.Text = $"AP-Konto: {remainingAP - selectedCulturePackCost}";
+        if (CulturePackCheckBox.IsChecked == false) APBudget.Text = $"AP-Konto: {remainingAP}";
     }
 
     private void Back(object sender, EventArgs e)

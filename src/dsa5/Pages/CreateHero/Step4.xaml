@@ -59,8 +59,8 @@
                         <Grid.RowDefinitions>
                             <RowDefinition/>
                             <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
 
                         <Grid.ColumnDefinitions>
@@ -82,14 +82,21 @@
                             Grid.Row="0"
                             HorizontalOptions="Center"/>
 
-                        <!--Checkbox-->
+                        <CheckBox
+                            x:Name="CulturePackCheckBox"
+                            CheckedChanged="OnCulturePackCheckBoxChanged"
+                            Grid.Column="1"
+                            Grid.Row="1"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"/>
 
                         <Label
                             x:Name="APLabel"
                             FontSize="16"
-                            Grid.Column="1"
+                            Grid.Column="0"
                             Grid.Row="1"
-                            HorizontalOptions="Center"/>
+                            HorizontalOptions="End"
+                            VerticalOptions="Center"/>
 
                         <Label
                             Text="Talente durch das Kulturpaket:"
