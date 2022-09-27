@@ -6,7 +6,7 @@ name: CI
     paths-ignore:
       - '**/**/README.md'
       - '**/**/.gitignore'
-      - '**/**/.github'
+      - '.github/'
   pull_request:
     branches:
       - main
