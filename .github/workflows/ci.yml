@@ -6,7 +6,7 @@ name: CI
     paths-ignore:
       - '**/**/README.md'
       - '**/**/.gitignore'
-      - '**/workflows/ci.yml'
+      - '**/workflows/*'
   pull_request:
     branches:
       - main
