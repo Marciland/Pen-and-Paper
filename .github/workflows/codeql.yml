@@ -9,11 +9,17 @@ name: "CodeQL"
 on:
   push:
     branches: [ "main" ]
+    paths-ignore:
+      - '**/**/README.md'
+      - '**/**/.gitignore'
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [ "main" ]
+  workflow_dispatch: null
   schedule:
     - cron: '25 22 * * 3'
+permissions:
+  contents: read
 
 jobs:
   analyze:
