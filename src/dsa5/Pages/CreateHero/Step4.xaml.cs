@@ -4,24 +4,23 @@ namespace dsa5.Pages.CreateHero;
 
 public partial class Step4 : ContentPage
 {
-    private readonly int remainingAP = 0;
     private int selectedCulturePackCost = 0;
-    private Species _species;
-    private Level _level;
+    private readonly Species _species;
+    private readonly Level _level;
 
 	public Step4(Species species, Level level)
 	{
         _species = species;
         _level = level;
-        remainingAP = level.APAvailable;
 		InitializeComponent();
-        APBudget.Text = $"AP-Konto: {remainingAP}";
+        APBudget.Text = $"AP-Konto: {level.APAvailable}";
         CulturePicker.ItemsSource = Culture.GetCultures();
         CulturePicker.SelectedIndex = 0;
     }
 
     private void Continue(object sender, EventArgs e)
     {
+        Culture selectedCulture = (Culture) CulturePicker.SelectedItem;
         //Navigation.PushAsync(new Step5(selectedCulture, _species, _level));
     }
 
@@ -31,7 +30,7 @@ public partial class Step4 : ContentPage
 
         if (picker.SelectedIndex != -1)
         {
-            Culture selectedCulture = (Culture)picker.SelectedItem;
+            Culture selectedCulture = (Culture) picker.SelectedItem;
 
             LanguagesLabel.Text = $"Sprache(n): {selectedCulture.language}";
             SocialStatusLabel.Text = "Sozialer Status: ";
@@ -68,8 +67,8 @@ public partial class Step4 : ContentPage
 
     private void OnCulturePackCheckBoxChanged(object sender, EventArgs e)
     {
-        if (CulturePackCheckBox.IsChecked == true)  APBudget.Text = $"AP-Konto: {remainingAP - selectedCulturePackCost}";
-        if (CulturePackCheckBox.IsChecked == false) APBudget.Text = $"AP-Konto: {remainingAP}";
+        if (CulturePackCheckBox.IsChecked == true)  APBudget.Text = $"AP-Konto: {_level.APAvailable - selectedCulturePackCost}";
+        if (CulturePackCheckBox.IsChecked == false) APBudget.Text = $"AP-Konto: {_level.APAvailable}";
     }
 
     private void Back(object sender, EventArgs e)
