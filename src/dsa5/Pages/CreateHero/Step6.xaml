@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage NavigationPage.HasNavigationBar="False" 
+             NavigationPage.HasBackButton="False"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="dsa5.Pages.CreateHero.Step6"
+             Title="CreateHero-Step6">
+
+    <ScrollView>
+
+        <VerticalStackLayout
+             Spacing="25"
+             Padding="30,0"
+             VerticalOptions="Center">
+
+            <Label
+                x:Name="APBudget"
+                HorizontalOptions="End"
+                FontSize="20"/>
+
+            <Label 
+                Text="Schritt 6:"
+                HorizontalOptions="Center"
+                FontSize="26"/>
+
+            <Grid
+                RowSpacing="5"
+                ColumnSpacing="10">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label
+                    Text="Mut"
+                    FontSize="18"/>
+
+                <Label
+                    x:Name="CourageLabel"
+                    Text="8"
+                    HorizontalOptions="Center"
+                    FontSize="18"/>
+
+                <Button
+                    x:Name="CouragePlus"
+                    Text="+"
+                    HorizontalOptions="End"/>
+
+                <Button
+                    x:Name="CourageMinus"
+                    Text="-"
+                    HorizontalOptions="End"/>
+
+                <Label
+                    Text="Cleverness"
+                    HorizontalOptions="Start"
+                    FontSize="18"/>
+
+                <Label
+                    x:Name="ClevernessLabel"
+                    Text="8"
+                    HorizontalOptions="Center"
+                    FontSize="18"/>
+
+                <Button
+                    x:Name="ClevernessPlus"
+                    Text="+"
+                    HorizontalOptions="End"/>
+
+                <Button
+                    x:Name="ClevernessMinus"
+                    Text="-"
+                    HorizontalOptions="End"/>
+
+                <Label
+                    Text="Intuition"
+                    HorizontalOptions="Start"
+                    FontSize="18"/>
+
+                <Label
+                    x:Name="IntuitionLabel"
+                    Text="8"
+                    HorizontalOptions="Center"
+                    FontSize="18"/>
+
+                <Button
+                    x:Name="IntuitionPlus"
+                    Text="+"
+                    HorizontalOptions="End"/>
+
+                <Button
+                    x:Name="IntuitionMinus"
+                    Text="-"
+                    HorizontalOptions="End"/>
+
+                <Label
+                    Text="Charisma"
+                    HorizontalOptions="Start"
+                    FontSize="18"/>
+
+                <Label
+                    x:Name="CharismaLabel"
+                    Text="8"
+                    HorizontalOptions="Center"
+                    FontSize="18"/>
+
+                <Button
+                    x:Name="CharismaPlus"
+                    Text="+"
+                    HorizontalOptions="End"/>
+
+                <Button
+                    x:Name="CharismaMinus"
+                    Text="-"
+                    HorizontalOptions="End"/>
+
+                <Label
+                    Text="Fingerfertigkeit"
+                    HorizontalOptions="Start"
+                    FontSize="18"/>
+
+                <Label
+                    x:Name="DexterityLabel"
+                    Text="8"
+                    HorizontalOptions="Center"
+                    FontSize="18"/>
+
+                <Button
+                    x:Name="DexterityPlus"
+                    Text="+"
+                    HorizontalOptions="End"/>
+
+                <Button
+                    x:Name="DexterityMinus"
+                    Text="-"
+                    HorizontalOptions="End"/>
+
+                <Label
+                    Text="Beweglichkeit"
+                    HorizontalOptions="Start"
+                    FontSize="18"/>
+
+                <Label
+                    x:Name="AgilityLabel"
+                    Text="8"
+                    HorizontalOptions="Center"
+                    FontSize="18"/>
+
+                <Button
+                    x:Name="AgilityPlus"
+                    Text="+"
+                    HorizontalOptions="End"/>
+
+                <Button
+                    x:Name="AgilityMinus"
+                    Text="-"
+                    HorizontalOptions="End"/>
+
+                <Label
+                    Text="Konstitution"
+                    HorizontalOptions="Start"
+                    FontSize="18"/>
+
+                <Label
+                    x:Name="ConstitutionLabel"
+                    Text="8"
+                    HorizontalOptions="Center"
+                    FontSize="18"/>
+
+                <Button
+                    x:Name="ConstitutionPlus"
+                    Text="+"
+                    HorizontalOptions="End"/>
+
+                <Button
+                    x:Name="ConstitutionMinus"
+                    Text="-"
+                    HorizontalOptions="End"/>
+
+                <Label
+                    Text="Stärke"
+                    HorizontalOptions="Start"
+                    FontSize="18"/>
+
+                <Label
+                    x:Name="StrenghtLabel"
+                    Text="8"
+                    HorizontalOptions="Center"
+                    FontSize="18"/>
+
+                <Button
+                    x:Name="StrenghtPlus"
+                    Text="+"
+                    HorizontalOptions="End"/>
+
+                <Button
+                    x:Name="StrenghtMinus"
+                    Text="-"
+                    HorizontalOptions="End"/>
+
+            </Grid>
+
+            <HorizontalStackLayout>
+
+                <Button
+                    x:Name="ContinueButton"
+                    Text="Weiter"
+                    Clicked="Continue"/>
+
+                <Button
+                    x:Name="BackButton"
+                    Text="Zurück"
+                    Clicked="Back"/>
+
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>
