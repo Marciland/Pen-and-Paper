@@ -1,3 +1,4 @@
+using dsa5.Abstractions;
 using dsa5.Dataclasses;
 
 namespace dsa5.Pages.CreateHero;
@@ -21,7 +22,9 @@ public partial class Step5 : ContentPage
 
     private void Continue(object sender, EventArgs e)
     {
-        //create new level to pass on to step6, push step6 with selected profession, culture, species, newlevel
+        Profession selectedProfession = (Profession)ProfessionPicker.SelectedItem;
+        Level newLevel = new() { name = _level.name, APTotal = _level.APTotal, APAvailable = _level.APAvailable - selectedProfession.AP, APSpent = _level.APSpent + selectedProfession.AP, maxAttribute = _level.maxAttribute, maxSkill = _level.maxSkill, maxCombatSkill = _level.maxCombatSkill, maxAttributeTotal = _level.maxAttributeTotal, maxSpells = _level.maxSpells, maxForeignSpells = _level.maxForeignSpells };
+        Navigation.PushAsync(new Step6(selectedProfession, _culture, _species, newLevel));
     }
 
     private void OnProfessionPickerSelectedIndexChanged(object sender, EventArgs e)
@@ -30,70 +33,20 @@ public partial class Step5 : ContentPage
 
         APBudget.Text = $"AP-Konto: {_level.APAvailable - selectedProfession.AP}";
 
-        PreconditionsLabel.Text = selectedProfession.preconditions;
+        PreconditionsLabel.Text = "Voraussetzungen: ";
+        PreconditionsLabel.Text += selectedProfession.preconditions;
 
         SpecialSkillsLabel.Text = "Sonderfertigkeiten: \n";
-        if (selectedProfession.specialSkills.Count == 0) SpecialSkillsLabel.Text += "Keine";
-        else
-        {
-            int linebreakCounter = 0;
-            foreach (string specialSkill in selectedProfession.specialSkills)
-            {
-                SpecialSkillsLabel.Text += $"{specialSkill}, ";
-                linebreakCounter++;
-                if (linebreakCounter % 2 == 0)
-                {
-                    SpecialSkillsLabel.Text += "\n";
-                }
-            }
+        SpecialSkillsLabel.Text += Utility.ListToString(selectedProfession.specialSkills, 1);
 
-            if (SpecialSkillsLabel.Text.EndsWith("\n")) SpecialSkillsLabel.Text = SpecialSkillsLabel.Text.Remove(SpecialSkillsLabel.Text.Length - 3);
-            else SpecialSkillsLabel.Text = SpecialSkillsLabel.Text.Remove(SpecialSkillsLabel.Text.Length - 2);
+        CombatSkillsLabel.Text = "Kampftechniken: \n";
+        CombatSkillsLabel.Text += Utility.ListToString(selectedProfession.combatSkills, 3);
 
-        }
+        SpellsLabel.Text = "Zauber: \n";
+        SpellsLabel.Text += Utility.ListToString(selectedProfession.spells, 2);
 
-        CombatSkillsLabel.Text = "Kampftechniken: ";
-        if (selectedProfession.combatSkills.Count == 0) CombatSkillsLabel.Text += "Keine";
-        else
-        {
-            int linebreakCounter = 0;
-            foreach (string combatSkill in selectedProfession.combatSkills)
-            {
-                CombatSkillsLabel.Text += $"{combatSkill}, ";
-                linebreakCounter++;
-                if (linebreakCounter % 2 == 0)
-                {
-                    CombatSkillsLabel.Text += "\n";
-                }
-            }
-
-            if (CombatSkillsLabel.Text.EndsWith("\n")) CombatSkillsLabel.Text = CombatSkillsLabel.Text.Remove(CombatSkillsLabel.Text.Length - 3);
-            else CombatSkillsLabel.Text = CombatSkillsLabel.Text.Remove(CombatSkillsLabel.Text.Length - 2);
-
-        }
-
-        SpellsLabel.Text = "Zauber: ";
-        if (selectedProfession.spells.Count == 0) SpellsLabel.Text += "Keine";
-        else
-        {
-            int linebreakCounter = 0;
-            foreach(string spell in selectedProfession.spells)
-            {
-                SpellsLabel.Text += $"{spell}, ";
-                linebreakCounter++;
-                if(linebreakCounter % 3 == 0)
-                {
-                    SpellsLabel.Text += "\n";
-                }
-            }
-
-            if (SpellsLabel.Text.EndsWith("\n")) SpellsLabel.Text = SpellsLabel.Text.Remove(SpellsLabel.Text.Length - 3);
-            else SpellsLabel.Text = SpellsLabel.Text.Remove(SpellsLabel.Text.Length - 2);
-
-        }
-
-        //fill skillslabel
-
+        SkillsLabel.Text = "Fertigkeiten: \n";
+        SkillsLabel.Text += Utility.ListToString(selectedProfession.skills, 3);
     }
 
     private void Back(object sender, EventArgs e)
