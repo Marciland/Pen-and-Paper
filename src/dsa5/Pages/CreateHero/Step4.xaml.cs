@@ -21,13 +21,21 @@ public partial class Step4 : ContentPage
     private void Continue(object sender, EventArgs e)
     {
         Culture selectedCulture = (Culture) CulturePicker.SelectedItem;
+
+        if (selectedCulture.type != _species.type)
+        {
+            //display warning: Unübliche Kultur
+        }
+
         if (CulturePackCheckBox.IsChecked == true)
         {
             Level newLevel = new () { name = _level.name, APTotal = _level.APTotal, APAvailable = _level.APAvailable - selectedCulture.AP, APSpent = _level.APSpent + selectedCulture.AP, maxAttribute = _level.maxAttribute, maxSkill = _level.maxSkill, maxCombatSkill = _level.maxCombatSkill, maxAttributeTotal = _level.maxAttributeTotal, maxSpells = _level.maxSpells, maxForeignSpells = _level.maxForeignSpells };
             Navigation.PushAsync(new Step5(selectedCulture, _species, newLevel));
             return;
         }
+
         Navigation.PushAsync(new Step5(selectedCulture, _species, _level));
+
     }
 
     private void OnCulturePickerSelectedIndexChanged(object sender, EventArgs e)
