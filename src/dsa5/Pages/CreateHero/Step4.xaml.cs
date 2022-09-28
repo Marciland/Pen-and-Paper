@@ -1,3 +1,4 @@
+using dsa5.Abstractions;
 using dsa5.Dataclasses;
 
 namespace dsa5.Pages.CreateHero;
@@ -46,38 +47,22 @@ public partial class Step4 : ContentPage
         {
             Culture selectedCulture = (Culture) picker.SelectedItem;
 
+            APLabel.Text = $"Kulturpaket Kosten: {selectedCulture.AP}";
+            SkillsLabel.Text = Utility.ListToString(selectedCulture.skills, 3);
             LanguagesLabel.Text = $"Sprache(n): {selectedCulture.language}";
+
             SocialStatusLabel.Text = "Sozialer Status: ";
             foreach (string status in selectedCulture.socialStatus)
             {
                 SocialStatusLabel.Text += $"{status} oder ";
             }
-            if(selectedCulture.socialStatus.Count != 0)
+            if(selectedCulture.socialStatus.Count >= 1)
             {
                 SocialStatusLabel.Text = SocialStatusLabel.Text.Remove(SocialStatusLabel.Text.Length - 6);
             }
+
             CulturePackCheckBox.IsChecked = false;
-            APLabel.Text = $"Kulturpaket Kosten: {selectedCulture.AP}";
             selectedCulturePackCost = selectedCulture.AP;
-            SkillsLabel.Text = "";
-            if (selectedCulture.skills.Count == 0) SkillsLabel.Text = "Keine";
-            else
-            {
-                int linebreakCounter = 0;
-                foreach (string skill in selectedCulture.skills)
-                {
-                    SkillsLabel.Text += $"{skill}, ";
-                    linebreakCounter++;
-                    if (linebreakCounter % 3 == 0)
-                    {
-                        SkillsLabel.Text += "\n";
-                    }
-                }
-
-                if (SkillsLabel.Text.EndsWith("\n")) SkillsLabel.Text = SkillsLabel.Text.Remove(SkillsLabel.Text.Length - 3);
-                else SkillsLabel.Text = SkillsLabel.Text.Remove(SkillsLabel.Text.Length - 2);
-
-            }
 
         }
 
