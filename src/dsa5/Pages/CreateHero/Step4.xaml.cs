@@ -61,20 +61,22 @@ public partial class Step4 : ContentPage
             selectedCulturePackCost = selectedCulture.AP;
             SkillsLabel.Text = "";
             if (selectedCulture.skills.Count == 0) SkillsLabel.Text = "Keine";
-            int linebreakCounter = 0;
-            foreach (string skill in selectedCulture.skills)
+            else
             {
-                SkillsLabel.Text += $"{skill}, ";
-                linebreakCounter++;
-                if(linebreakCounter % 3 == 0)
+                int linebreakCounter = 0;
+                foreach (string skill in selectedCulture.skills)
                 {
-                    SkillsLabel.Text += "\n";
+                    SkillsLabel.Text += $"{skill}, ";
+                    linebreakCounter++;
+                    if (linebreakCounter % 3 == 0)
+                    {
+                        SkillsLabel.Text += "\n";
+                    }
                 }
-            }
-            if(selectedCulture.skills.Count > 1)
-            {
-                if(SkillsLabel.Text.EndsWith("\n")) SkillsLabel.Text = SkillsLabel.Text.Remove(SkillsLabel.Text.Length - 3);
+
+                if (SkillsLabel.Text.EndsWith("\n")) SkillsLabel.Text = SkillsLabel.Text.Remove(SkillsLabel.Text.Length - 3);
                 else SkillsLabel.Text = SkillsLabel.Text.Remove(SkillsLabel.Text.Length - 2);
+
             }
 
         }

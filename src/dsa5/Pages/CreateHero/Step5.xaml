@@ -24,17 +24,17 @@
                 FontSize="26"/>
 
             <Label 
-                Text=""
+                Text="Wähle deine Profession. Sie entscheidet über die Erfahrung und Können deines Helden."
                 HorizontalOptions="Center"
                 FontSize="18"/>
 
             <Label 
-                Text=""
+                Text="(Eine für deine Kultur unübliche Profession oder eine Eigenkreation erfordern eine Absprache mit dem Spielleiter)"
                 HorizontalOptions="Center"
                 FontSize="18"/>
 
             <Label 
-                Text=""
+                Text="Professionen sind geschlechtsunabhängig."
                 HorizontalOptions="Center"
                 FontSize="18"/>
 
@@ -59,51 +59,48 @@
                         <Grid.RowDefinitions>
                             <RowDefinition/>
                             <RowDefinition/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
+                            <RowDefinition/>
                         </Grid.RowDefinitions>
 
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
 
                         <Label
-                            x:Name="LanguagesLabel"
+                            x:Name="PreconditionsLabel"
                             FontSize="16"
                             Grid.Column="0"
                             Grid.Row="0"
                             HorizontalOptions="Center"/>
 
                         <Label
-                            x:Name="SocialStatusLabel"
+                            x:Name="SpecialSkillsLabel"
                             FontSize="16"
                             Grid.Column="1"
                             Grid.Row="0"
                             HorizontalOptions="Center"/>
 
                         <Label
-                            x:Name="APLabel"
+                            x:Name="CombatSkillsLabel"
                             FontSize="16"
                             Grid.Column="0"
                             Grid.Row="1"
-                            HorizontalOptions="End"
-                            VerticalOptions="Center"/>
+                            HorizontalOptions="Center"/>
 
                         <Label
-                            Text=""
+                            x:Name="SpellsLabel"
                             FontSize="16"
-                            Grid.Column="0"
-                            Grid.Row="2"
-                            Grid.ColumnSpan="2"
+                            Grid.Column="1"
+                            Grid.Row="1"
                             HorizontalOptions="Center"/>
-                        
+
                         <Label
                             x:Name="SkillsLabel"
                             LineBreakMode="WordWrap"
                             FontSize="16"
                             Grid.Column="0"
-                            Grid.Row="3"
+                            Grid.Row="2"
                             Grid.ColumnSpan="2"
                             HorizontalOptions="Center"/>
 
