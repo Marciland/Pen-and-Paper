@@ -109,25 +109,29 @@
                         x:Name="CouragePlus"
                         Text="+"
                         Grid.Column="2"
-                        Grid.Row="0"/>
+                        Grid.Row="0"
+                        Clicked="AddAttribute"/>
 
                     <Button
                         x:Name="ClevernessPlus"
                         Text="+"
                         Grid.Column="2"
-                        Grid.Row="1"/>
+                        Grid.Row="1"
+                        Clicked="AddAttribute"/>
 
                     <Button
                         x:Name="IntuitionPlus"
                         Text="+"
                         Grid.Column="2"
-                        Grid.Row="2"/>
+                        Grid.Row="2"
+                        Clicked="AddAttribute"/>
 
                     <Button
                         x:Name="CharismaPlus"
                         Text="+"
                         Grid.Column="2"
-                        Grid.Row="3"/>
+                        Grid.Row="3"
+                        Clicked="AddAttribute"/>
 
                     <Button
                         x:Name="CourageMinus"
@@ -237,25 +241,29 @@
                         x:Name="DexterityPlus"
                         Text="+"
                         Grid.Column="2"
-                        Grid.Row="0"/>
+                        Grid.Row="0"
+                        Clicked="AddAttribute"/>
 
                     <Button
                         x:Name="AgilityPlus"
                         Text="+"
                         Grid.Column="2"
-                        Grid.Row="1"/>
+                        Grid.Row="1"
+                        Clicked="AddAttribute"/>
 
                     <Button
                         x:Name="ConstitutionPlus"
                         Text="+"
                         Grid.Column="2"
-                        Grid.Row="2"/>
+                        Grid.Row="2"
+                        Clicked="AddAttribute"/>
 
                     <Button
                         x:Name="StrengthPlus"
                         Text="+"
                         Grid.Column="2"
-                        Grid.Row="3"/>
+                        Grid.Row="3"
+                        Clicked="AddAttribute"/>
 
                     <Button
                         x:Name="DexterityMinus"

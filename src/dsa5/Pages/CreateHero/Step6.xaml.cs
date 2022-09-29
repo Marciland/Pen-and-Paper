@@ -24,6 +24,11 @@ public partial class Step6 : ContentPage
         //create new level to pass on to step 7 still needs to be refined on miro
     }
 
+    private void AddAttribute(object sender, EventArgs e)
+    {
+        
+    }
+
     private void Back(object sender, EventArgs e)
     {
         Navigation.PopAsync();
