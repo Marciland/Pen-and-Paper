@@ -8,7 +8,7 @@ name: "CodeQL"
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "develop" ]
     paths-ignore:
       - '**/**/README.md'
       - '**/**/.gitignore'
@@ -17,8 +17,6 @@ on:
     # The branches below must be a subset of the branches above
     branches: [ "main" ]
   workflow_dispatch: null
-  schedule:
-    - cron: '25 22 * * 3'
 permissions:
   contents: read
 
@@ -54,7 +52,7 @@ jobs:
 
     - name: Install MAUI Workload
       run: dotnet workload install maui --ignore-failed-sources
-      
+
     - name: Restore Dependencies
       run: dotnet restore src/dsa5/dsa5.csproj
 
