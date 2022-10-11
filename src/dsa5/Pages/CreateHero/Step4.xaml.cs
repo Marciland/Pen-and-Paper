@@ -74,6 +74,7 @@ public partial class Step4 : ContentPage
         if (CulturePackCheckBox.IsChecked == false) APBudget.Text = $"AP-Konto: {_level.APAvailable}";
     }
 
+    [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute]
     private void Back(object sender, EventArgs e)
     {
         Navigation.PopAsync();

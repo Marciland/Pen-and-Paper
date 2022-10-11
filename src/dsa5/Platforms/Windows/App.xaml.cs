@@ -8,6 +8,7 @@ namespace dsa5.WinUI;
 /// <summary>
 /// Provides application-specific behavior to supplement the default Application class.
 /// </summary>
+[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute]
 public partial class App : MauiWinUIApplication
 {
 	/// <summary>
@@ -15,8 +16,8 @@ public partial class App : MauiWinUIApplication
 	/// executed, and as such is the logical equivalent of main() or WinMain().
 	/// </summary>
 	public App()
-	{
-		this.InitializeComponent();
+    {
+        this.InitializeComponent();
 	}
 
 	protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();

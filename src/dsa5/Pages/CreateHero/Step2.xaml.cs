@@ -12,11 +12,13 @@ public partial class Step2 : ContentPage
         LevelPicker.SelectedIndex = 0;
     }
 
+    [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute]
     private void Continue(object sender, EventArgs e)
     {
         Navigation.PushAsync(new Step3((Level)LevelPicker.SelectedItem));
     }
 
+    [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute]
     private void Back(object sender, EventArgs e)
     {
         Navigation.PopAsync();

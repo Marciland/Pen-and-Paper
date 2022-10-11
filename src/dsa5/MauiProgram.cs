@@ -1,8 +1,9 @@
 ﻿namespace dsa5;
 
+[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute]
 public static class MauiProgram
 {
-	public static MauiApp CreateMauiApp()
+    public static MauiApp CreateMauiApp()
 	{
 		var builder = MauiApp.CreateBuilder();
 		builder

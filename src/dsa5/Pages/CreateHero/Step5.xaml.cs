@@ -49,6 +49,7 @@ public partial class Step5 : ContentPage
         SkillsLabel.Text += Utility.ListToString(selectedProfession.skills, 3);
     }
 
+    [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute]
     private void Back(object sender, EventArgs e)
     {
         Navigation.PopAsync();

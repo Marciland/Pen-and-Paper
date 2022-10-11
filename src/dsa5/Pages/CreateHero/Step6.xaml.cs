@@ -29,6 +29,7 @@ public partial class Step6 : ContentPage
         
     }
 
+    [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute]
     private void Back(object sender, EventArgs e)
     {
         Navigation.PopAsync();

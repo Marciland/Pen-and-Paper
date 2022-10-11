@@ -52,6 +52,7 @@ public partial class Step3 : ContentPage
 
     }
 
+    [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute]
     private void Back(object sender, EventArgs e)
     {
         Navigation.PopAsync();

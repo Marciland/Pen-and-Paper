@@ -1,5 +1,6 @@
 namespace dsa5.Pages.CreateHero;
 
+[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute]
 public partial class Step1 : ContentPage
 {
 
