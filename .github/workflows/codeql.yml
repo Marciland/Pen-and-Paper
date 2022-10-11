@@ -8,14 +8,14 @@ name: "CodeQL"
 
 on:
   push:
-    branches: [ "main", "develop" ]
+    branches: ["main", "develop"]
     paths-ignore:
-      - '**/**/README.md'
-      - '**/**/.gitignore'
-      - '**/workflows/*'
+      - "**/**/README.md"
+      - "**/**/.gitignore"
+      - "**/workflows/*"
   pull_request:
     # The branches below must be a subset of the branches above
-    branches: [ "main" ]
+    branches: ["main"]
   workflow_dispatch: null
 permissions:
   contents: read
@@ -32,40 +32,40 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [ 'csharp' ]
+        language: ["csharp"]
         # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby' ]
         # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Setup .NET 6
-      uses: actions/setup-dotnet@v2
-      with:
-        dotnet-version: 6.0.x
+      - name: Setup .NET 6
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: 6.0.x
 
-    - name: Initialize CodeQL
-      uses: github/codeql-action/init@v2
-      with:
-        languages: ${{ matrix.language }}
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
+        with:
+          languages: ${{ matrix.language }}
 
-    - name: Install MAUI Workload
-      run: dotnet workload install maui --ignore-failed-sources
+      - name: Install MAUI Workload
+        run: dotnet workload install maui --ignore-failed-sources
 
-    - name: Restore Dependencies
-      run: dotnet restore src/dsa5/dsa5.csproj
+      - name: Restore Dependencies
+        run: dotnet restore src/dsa5/dsa5.csproj
 
-    - name: Build MAUI Android
-      run: dotnet publish src/dsa5/dsa5.csproj -c Release -f net6.0-android --no-restore
-    - name: Build MAUI Windows
-      run: dotnet publish src/dsa5/dsa5.csproj -c Release -f net6.0-windows10.0.19041.0 --no-restore
-    - name: Build MAUI iOS
-      run: dotnet build src/dsa5/dsa5.csproj -c Release -f net6.0-ios --no-restore /p:buildForSimulator=True /p:packageApp=True /p:ArchiveOnBuild=False
-    - name: Build MAUI MacCatalyst
-      run: dotnet publish src/dsa5/dsa5.csproj -c Release -f net6.0-maccatalyst --no-restore -p:BuildIpa=True
+      - name: Build MAUI Android
+        run: dotnet publish src/dsa5/dsa5.csproj -c Release -f net6.0-android --no-restore
+      - name: Build MAUI Windows
+        run: dotnet publish src/dsa5/dsa5.csproj -c Release -f net6.0-windows10.0.19041.0 --no-restore
+      - name: Build MAUI iOS
+        run: dotnet build src/dsa5/dsa5.csproj -c Release -f net6.0-ios --no-restore /p:buildForSimulator=True /p:packageApp=True /p:ArchiveOnBuild=False
+      - name: Build MAUI MacCatalyst
+        run: dotnet publish src/dsa5/dsa5.csproj -c Release -f net6.0-maccatalyst --no-restore -p:BuildIpa=True
 
-    - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v2
-      with:
-        category: "/language:${{matrix.language}}"
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v2
+        with:
+          category: "/language:${{matrix.language}}"

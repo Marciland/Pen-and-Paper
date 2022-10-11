@@ -1,13 +1,13 @@
 name: CI
-'on':
+"on":
   pull_request:
     branches:
       - develop
       - main
     paths-ignore:
-      - '**/**/README.md'
-      - '**/**/.gitignore'
-      - '**/workflows/*'
+      - "**/**/README.md"
+      - "**/**/.gitignore"
+      - "**/workflows/*"
   workflow_dispatch: null
 permissions:
   contents: read
