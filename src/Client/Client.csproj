@@ -4,14 +4,14 @@
 		<TargetFrameworks>net6.0;net6.0-android;net6.0-ios;net6.0-maccatalyst</TargetFrameworks>
 		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net6.0-windows10.0.19041.0</TargetFrameworks>
 		<OutputType Condition="'$(TargetFramework)' != 'net6.0'">Exe</OutputType>
-		<RootNamespace>dsa5</RootNamespace>
+		<RootNamespace>Client</RootNamespace>
 		<UseMaui>true</UseMaui>
 		<SingleProject>true</SingleProject>
 		<DefaultLanguage>de-de</DefaultLanguage>
 		<ImplicitUsings>enable</ImplicitUsings>
 
-		<ApplicationTitle>dsa5</ApplicationTitle>
-		<ApplicationId>de.marciland.dsa5</ApplicationId>
+		<ApplicationTitle>Das Schwarze Auge 5 - Client</ApplicationTitle>
+		<ApplicationId>de.marciland.dsa5-client</ApplicationId>
 		<ApplicationIdGuid>ca7b9f2d-b2bd-4227-88b3-8c1311286bb7</ApplicationIdGuid>
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
 		<ApplicationVersion>1</ApplicationVersion>
