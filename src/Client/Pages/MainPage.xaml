@@ -7,11 +7,11 @@
 
             <Label Text="Willkommen Abenteurer!" SemanticProperties.HeadingLevel="Level1" FontSize="26" HorizontalOptions="Center" />
 
-            <Button x:Name="PlayAdventureButton" Text="Abenteuer spielen" Clicked="PlayAdventure" FontSize="18" HorizontalOptions="Center" />
+            <Button Text="Abenteuer spielen" Clicked="PlayAdventure" FontSize="18" HorizontalOptions="Center" />
 
-            <Button x:Name="EditHeroButton" Text="Held bearbeiten" Clicked="EditHero" FontSize="18" HorizontalOptions="Center" />
+            <Button Text="Held bearbeiten" Clicked="EditHero" FontSize="18" HorizontalOptions="Center" />
 
-            <Button x:Name="CreateHeroButton" Text="Held erstellen" Clicked="CreateHero" FontSize="18" HorizontalOptions="Center" />
+            <Button Text="Held erstellen" Clicked="CreateHero" FontSize="18" HorizontalOptions="Center" />
 
         </VerticalStackLayout>
 

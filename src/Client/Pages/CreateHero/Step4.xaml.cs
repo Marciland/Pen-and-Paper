@@ -3,7 +3,7 @@ using Client.Dataclasses;
 
 namespace Client.Pages.CreateHero;
 
-public partial class Step4 : ContentPage
+public partial class Step4
 {
     private int _selectedCulturePackCost = 0;
     private readonly Species _species;

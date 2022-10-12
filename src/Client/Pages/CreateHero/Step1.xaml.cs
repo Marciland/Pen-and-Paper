@@ -1,7 +1,7 @@
 namespace Client.Pages.CreateHero;
 
 [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class Step1 : ContentPage
+public partial class Step1
 {
 
 	public Step1()

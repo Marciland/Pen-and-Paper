@@ -1,7 +1,7 @@
 ﻿namespace Client.Pages;
 
 [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class MainPage : ContentPage
+public partial class MainPage
 {
 
     public MainPage()

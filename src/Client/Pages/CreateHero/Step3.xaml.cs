@@ -2,7 +2,7 @@ using Client.Dataclasses;
 
 namespace Client.Pages.CreateHero;
 
-public partial class Step3 : ContentPage
+public partial class Step3
 {
     private readonly Level _level;
 

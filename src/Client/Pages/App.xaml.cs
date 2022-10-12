@@ -1,11 +1,11 @@
 ﻿namespace Client.Pages;
 
 [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
-public partial class App : Application
+public partial class App
 {
-	public App()
-	{
-		InitializeComponent();
+    public App()
+    {
+        InitializeComponent();
 
         MainPage = new NavigationPage(new MainPage());
     }
