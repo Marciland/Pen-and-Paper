@@ -37,29 +37,23 @@ public partial class Step3
     private void OnSpeciesPickerSelectedIndexChanged(object sender, EventArgs e)
     {
         Picker picker = (Picker)sender;
+        if (picker.SelectedIndex == -1) return;
+        Species selectedSpecies = (Species)picker.SelectedItem;
 
-        if (picker.SelectedIndex != -1)
+        ApBudget.Text = $"AP-Konto: {_level.apAvailable - selectedSpecies.ap}";
+        LeLabel.Text = $"Lebensenergie-Grundwert (LE): {selectedSpecies.le}";
+        SkLabel.Text = $"Seelenkraft-Grundwert (SK): {selectedSpecies.sk}";
+        ZkLabel.Text = $"Zähigkeit-Grundwert (ZK): {selectedSpecies.zk}";
+        GsLabel.Text = $"Geschwindigkeit-Grundwert (GS): {selectedSpecies.gs}";
+        AttributeLabel.Text = selectedSpecies.attributes;
+        PerkLabel.Text = "Vorteile: ";
+        foreach (Perk perk in selectedSpecies.perks)
         {
-            Species selectedSpecies = (Species)picker.SelectedItem;
-
-            ApBudget.Text = $"AP-Konto: {_level.apAvailable - selectedSpecies.ap}";
-            LeLabel.Text = $"Lebensenergie-Grundwert (LE): {selectedSpecies.le}";
-            SkLabel.Text = $"Seelenkraft-Grundwert (SK): {selectedSpecies.sk}";
-            ZkLabel.Text = $"Zähigkeit-Grundwert (ZK): {selectedSpecies.zk}";
-            GsLabel.Text = $"Geschwindigkeit-Grundwert (GS): {selectedSpecies.gs}";
-            AttributeLabel.Text = selectedSpecies.attributes;
-            PerkLabel.Text = "Vorteile: ";
-            foreach (Perk perk in selectedSpecies.perks)
-            {
-                PerkLabel.Text += $"{perk.name}, ";
-            }
-            if (selectedSpecies.perks.Count != 0)
-            {
-                PerkLabel.Text = PerkLabel.Text.Remove(PerkLabel.Text.Length - 2);
-            }
-
+            PerkLabel.Text += $"{perk.name}, ";
         }
-
+        PerkLabel.Text = selectedSpecies.perks.Count == 0
+            ? PerkLabel.Text + "Keine"
+            : PerkLabel.Text.Remove(PerkLabel.Text.Length - 2);
     }
 
     [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]

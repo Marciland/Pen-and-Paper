@@ -42,36 +42,31 @@ public partial class Step4
     private void OnCulturePickerSelectedIndexChanged(object sender, EventArgs e)
     {
         Picker picker = (Picker)sender;
+        if (picker.SelectedIndex == -1) return;
+        Culture selectedCulture = (Culture)picker.SelectedItem;
 
-        if (picker.SelectedIndex != -1)
+        ApLabel.Text = $"Kulturpaket Kosten: {selectedCulture.ap}";
+        SkillsLabel.Text = Utility.ListToString(selectedCulture.skills, 3);
+        LanguagesLabel.Text = $"Sprache(n): {selectedCulture.language}";
+        SocialStatusLabel.Text = "Sozialer Status: ";
+        foreach (string status in selectedCulture.socialStatus)
         {
-            Culture selectedCulture = (Culture)picker.SelectedItem;
-
-            ApLabel.Text = $"Kulturpaket Kosten: {selectedCulture.ap}";
-            SkillsLabel.Text = Utility.ListToString(selectedCulture.skills, 3);
-            LanguagesLabel.Text = $"Sprache(n): {selectedCulture.language}";
-
-            SocialStatusLabel.Text = "Sozialer Status: ";
-            foreach (string status in selectedCulture.socialStatus)
-            {
-                SocialStatusLabel.Text += $"{status} oder ";
-            }
-            if (selectedCulture.socialStatus.Count >= 1)
-            {
-                SocialStatusLabel.Text = SocialStatusLabel.Text.Remove(SocialStatusLabel.Text.Length - 6);
-            }
-
-            CulturePackCheckBox.IsChecked = false;
-            _selectedCulturePackCost = selectedCulture.ap;
-
+            SocialStatusLabel.Text += $"{status} oder ";
+        }
+        if (selectedCulture.socialStatus.Count >= 1)
+        {
+            SocialStatusLabel.Text = SocialStatusLabel.Text.Remove(SocialStatusLabel.Text.Length - 6);
         }
 
+        CulturePackCheckBox.IsChecked = false;
+        _selectedCulturePackCost = selectedCulture.ap;
     }
 
     private void OnCulturePackCheckBoxChanged(object sender, EventArgs e)
     {
-        if (CulturePackCheckBox.IsChecked) ApBudget.Text = $"AP-Konto: {_level.apAvailable - _selectedCulturePackCost}";
-        if (!CulturePackCheckBox.IsChecked) ApBudget.Text = $"AP-Konto: {_level.apAvailable}";
+        ApBudget.Text = CulturePackCheckBox.IsChecked
+            ? $"AP-Konto: {_level.apAvailable - _selectedCulturePackCost}"
+            : $"AP-Konto: {_level.apAvailable}";
     }
 
     [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]

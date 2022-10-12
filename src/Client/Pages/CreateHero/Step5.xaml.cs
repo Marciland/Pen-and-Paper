@@ -9,12 +9,12 @@ public partial class Step5
     private readonly Species _species;
     private readonly Level _level;
 
-	public Step5(Culture culture, Species species, Level level)
-	{
+    public Step5(Culture culture, Species species, Level level)
+    {
         _culture = culture;
         _species = species;
         _level = level;
-		InitializeComponent();
+        InitializeComponent();
         ApBudget.Text = $"AP-Konto: {level.apAvailable}";
         ProfessionPicker.ItemsSource = Profession.GetProfessions();
         ProfessionPicker.SelectedIndex = 0;
