@@ -34,15 +34,15 @@
                             <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
 
-                        <Label x:Name="PreconditionsLabel" FontSize="16" Grid.Column="0" Grid.Row="0" HorizontalOptions="Center" />
+                        <Label x:Name="PreconditionsLabel" FontSize="16" Grid.Column="0" Grid.Row="0" HorizontalOptions="Start" />
 
-                        <Label x:Name="SpecialSkillsLabel" FontSize="16" Grid.Column="1" Grid.Row="0" HorizontalOptions="Center" />
+                        <Label x:Name="SpecialSkillsLabel" FontSize="16" Grid.Column="1" Grid.Row="0" HorizontalOptions="End" />
 
-                        <Label x:Name="CombatSkillsLabel" FontSize="16" Grid.Column="0" Grid.Row="1" HorizontalOptions="Center" />
+                        <Label x:Name="CombatSkillsLabel" FontSize="16" Grid.Column="0" Grid.Row="1" HorizontalOptions="Start" />
 
-                        <Label x:Name="SpellsLabel" FontSize="16" Grid.Column="1" Grid.Row="1" HorizontalOptions="Center" />
+                        <Label x:Name="SpellsLabel" FontSize="16" Grid.Column="1" Grid.Row="1" HorizontalOptions="End" />
 
-                        <Label x:Name="SkillsLabel" LineBreakMode="WordWrap" FontSize="16" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" HorizontalOptions="Center" />
+                        <Label x:Name="SkillsLabel" LineBreakMode="WordWrap" FontSize="16" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" HorizontalOptions="Start" />
 
                     </Grid>
 

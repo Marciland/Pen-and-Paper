@@ -32,7 +32,7 @@
 
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition />
-                            <ColumnDefinition />
+                            <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
 
                         <Label x:Name="LanguagesLabel" FontSize="16" Grid.Column="0" Grid.Row="0" HorizontalOptions="Center" />

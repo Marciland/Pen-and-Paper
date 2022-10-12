@@ -46,7 +46,7 @@ public partial class Step5
         SpellsLabel.Text += Utility.ListToString(selectedProfession.spells, 2);
 
         SkillsLabel.Text = "Fertigkeiten: \n";
-        SkillsLabel.Text += Utility.ListToString(selectedProfession.skills, 3);
+        SkillsLabel.Text += Utility.ListToString(selectedProfession.skills, 4);
     }
 
     [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
