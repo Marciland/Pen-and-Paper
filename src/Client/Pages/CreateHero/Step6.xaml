@@ -298,12 +298,10 @@
                 Spacing="25">
 
                 <Button
-                    x:Name="ContinueButton"
                     Text="Weiter"
                     Clicked="Continue"/>
 
                 <Button
-                    x:Name="BackButton"
                     Text="Zurück"
                     Clicked="Back"/>
 
