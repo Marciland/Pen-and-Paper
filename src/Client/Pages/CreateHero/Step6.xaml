@@ -9,6 +9,12 @@
 
             <Label Text="Schritt 6:" HorizontalOptions="Center" FontSize="26" />
 
+            <Label Text="Verbessere nun deine Eigenschaften. Sie werden verwendet für Fertigkeitsproben, Zaubern etc." HorizontalOptions="Center" FontSize="18" />
+
+            <Label Text="Der Erfahrungsgrad bestimmt die Maximalwerte für deine Attribute." HorizontalOptions="Center" FontSize="18" />
+
+            <Label x:Name="MaxAttributes" HorizontalOptions="Center" FontSize="18"/>
+
             <HorizontalStackLayout HorizontalOptions="Center" Spacing="50">
 
                 <Grid RowSpacing="5" ColumnSpacing="10">
@@ -43,21 +49,21 @@
 
                     <Label x:Name="CharismaLabel" Text="8" FontSize="18" Grid.Column="1" Grid.Row="3" VerticalOptions="Center" />
 
-                    <Button x:Name="CouragePlus" Text="+" Grid.Column="2" Grid.Row="0" Clicked="AddAttribute" />
+                    <Button ClassId="CouragePlus" Text="+" Grid.Column="2" Grid.Row="0" Clicked="AddAttribute" />
 
-                    <Button x:Name="ClevernessPlus" Text="+" Grid.Column="2" Grid.Row="1" Clicked="AddAttribute" />
+                    <Button ClassId="ClevernessPlus" Text="+" Grid.Column="2" Grid.Row="1" Clicked="AddAttribute" />
 
-                    <Button x:Name="IntuitionPlus" Text="+" Grid.Column="2" Grid.Row="2" Clicked="AddAttribute" />
+                    <Button ClassId="IntuitionPlus" Text="+" Grid.Column="2" Grid.Row="2" Clicked="AddAttribute" />
 
-                    <Button x:Name="CharismaPlus" Text="+" Grid.Column="2" Grid.Row="3" Clicked="AddAttribute" />
+                    <Button ClassId="CharismaPlus" Text="+" Grid.Column="2" Grid.Row="3" Clicked="AddAttribute" />
 
-                    <Button x:Name="CourageMinus" Text="-" Grid.Column="3" Grid.Row="0" />
+                    <Button ClassId="CourageMinus" Text="-" Grid.Column="3" Grid.Row="0" />
 
-                    <Button x:Name="ClevernessMinus" Text="-" Grid.Column="3" Grid.Row="1" />
+                    <Button ClassId="ClevernessMinus" Text="-" Grid.Column="3" Grid.Row="1" />
 
-                    <Button x:Name="IntuitionMinus" Text="-" Grid.Column="3" Grid.Row="2" />
+                    <Button ClassId="IntuitionMinus" Text="-" Grid.Column="3" Grid.Row="2" />
 
-                    <Button x:Name="CharismaMinus" Text="-" Grid.Column="3" Grid.Row="3" />
+                    <Button ClassId="CharismaMinus" Text="-" Grid.Column="3" Grid.Row="3" />
 
                 </Grid>
 
@@ -93,21 +99,21 @@
 
                     <Label x:Name="StrengthLabel" Text="8" FontSize="18" Grid.Column="1" Grid.Row="3" VerticalOptions="Center" />
 
-                    <Button x:Name="DexterityPlus" Text="+" Grid.Column="2" Grid.Row="0" Clicked="AddAttribute" />
+                    <Button ClassId="DexterityPlus" Text="+" Grid.Column="2" Grid.Row="0" Clicked="AddAttribute" />
 
-                    <Button x:Name="AgilityPlus" Text="+" Grid.Column="2" Grid.Row="1" Clicked="AddAttribute" />
+                    <Button ClassId="AgilityPlus" Text="+" Grid.Column="2" Grid.Row="1" Clicked="AddAttribute" />
 
-                    <Button x:Name="ConstitutionPlus" Text="+" Grid.Column="2" Grid.Row="2" Clicked="AddAttribute" />
+                    <Button ClassId="ConstitutionPlus" Text="+" Grid.Column="2" Grid.Row="2" Clicked="AddAttribute" />
 
-                    <Button x:Name="StrengthPlus" Text="+" Grid.Column="2" Grid.Row="3" Clicked="AddAttribute" />
+                    <Button ClassId="StrengthPlus" Text="+" Grid.Column="2" Grid.Row="3" Clicked="AddAttribute" />
 
-                    <Button x:Name="DexterityMinus" Text="-" Grid.Column="3" Grid.Row="0" />
+                    <Button ClassId="DexterityMinus" Text="-" Grid.Column="3" Grid.Row="0" />
 
-                    <Button x:Name="AgilityMinus" Text="-" Grid.Column="3" Grid.Row="1" />
+                    <Button ClassId="AgilityMinus" Text="-" Grid.Column="3" Grid.Row="1" />
 
-                    <Button x:Name="ConstitutionMinus" Text="-" Grid.Column="3" Grid.Row="2" />
+                    <Button ClassId="ConstitutionMinus" Text="-" Grid.Column="3" Grid.Row="2" />
 
-                    <Button x:Name="StrengthMinus" Text="-" Grid.Column="3" Grid.Row="3" />
+                    <Button ClassId="StrengthMinus" Text="-" Grid.Column="3" Grid.Row="3" />
 
                 </Grid>
 
