@@ -54,16 +54,16 @@ jobs:
         run: dotnet workload install maui --ignore-failed-sources
 
       - name: Restore Dependencies
-        run: dotnet restore src/dsa5/dsa5.csproj
+        run: dotnet restore src/Client/Client.csproj
 
       - name: Build MAUI Android
-        run: dotnet publish src/dsa5/dsa5.csproj -c Release -f net6.0-android --no-restore
+        run: dotnet publish src/Client/Client.csproj -c Release -f net6.0-android --no-restore
       - name: Build MAUI Windows
-        run: dotnet publish src/dsa5/dsa5.csproj -c Release -f net6.0-windows10.0.19041.0 --no-restore
+        run: dotnet publish src/Client/Client.csproj -c Release -f net6.0-windows10.0.19041.0 --no-restore
       - name: Build MAUI iOS
-        run: dotnet build src/dsa5/dsa5.csproj -c Release -f net6.0-ios --no-restore /p:buildForSimulator=True /p:packageApp=True /p:ArchiveOnBuild=False
+        run: dotnet build src/Client/Client.csproj -c Release -f net6.0-ios --no-restore /p:buildForSimulator=True /p:packageApp=True /p:ArchiveOnBuild=False
       - name: Build MAUI MacCatalyst
-        run: dotnet publish src/dsa5/dsa5.csproj -c Release -f net6.0-maccatalyst --no-restore -p:BuildIpa=True
+        run: dotnet publish src/Client/Client.csproj -c Release -f net6.0-maccatalyst --no-restore -p:BuildIpa=True
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
