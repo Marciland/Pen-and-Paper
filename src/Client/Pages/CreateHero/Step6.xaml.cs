@@ -1,6 +1,6 @@
-using dsa5.Dataclasses;
+using Client.Dataclasses;
 
-namespace dsa5.Pages.CreateHero;
+namespace Client.Pages.CreateHero;
 
 public partial class Step6 : ContentPage
 {
@@ -16,7 +16,7 @@ public partial class Step6 : ContentPage
         _species = species;
         _level = level;
         InitializeComponent();
-        APBudget.Text = $"AP-Konto: {level.APAvailable}";
+        ApBudget.Text = $"AP-Konto: {level.apAvailable}";
     }
 
     private void Continue(object sender, EventArgs e)
@@ -29,7 +29,7 @@ public partial class Step6 : ContentPage
         
     }
 
-    [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute]
+    [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
     private void Back(object sender, EventArgs e)
     {
         Navigation.PopAsync();

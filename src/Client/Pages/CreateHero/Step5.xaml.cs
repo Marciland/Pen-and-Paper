@@ -1,7 +1,7 @@
-using dsa5.Abstractions;
-using dsa5.Dataclasses;
+using Client.Abstractions;
+using Client.Dataclasses;
 
-namespace dsa5.Pages.CreateHero;
+namespace Client.Pages.CreateHero;
 
 public partial class Step5 : ContentPage
 {
@@ -15,7 +15,7 @@ public partial class Step5 : ContentPage
         _species = species;
         _level = level;
 		InitializeComponent();
-        APBudget.Text = $"AP-Konto: {level.APAvailable}";
+        ApBudget.Text = $"AP-Konto: {level.apAvailable}";
         ProfessionPicker.ItemsSource = Profession.GetProfessions();
         ProfessionPicker.SelectedIndex = 0;
     }
@@ -23,7 +23,7 @@ public partial class Step5 : ContentPage
     private void Continue(object sender, EventArgs e)
     {
         Profession selectedProfession = (Profession)ProfessionPicker.SelectedItem;
-        Level newLevel = new() { name = _level.name, APTotal = _level.APTotal, APAvailable = _level.APAvailable - selectedProfession.AP, APSpent = _level.APSpent + selectedProfession.AP, maxAttribute = _level.maxAttribute, maxSkill = _level.maxSkill, maxCombatSkill = _level.maxCombatSkill, maxAttributeTotal = _level.maxAttributeTotal, maxSpells = _level.maxSpells, maxForeignSpells = _level.maxForeignSpells };
+        Level newLevel = new() { name = _level.name, apTotal = _level.apTotal, apAvailable = _level.apAvailable - selectedProfession.ap, apSpent = _level.apSpent + selectedProfession.ap, maxAttribute = _level.maxAttribute, maxSkill = _level.maxSkill, maxCombatSkill = _level.maxCombatSkill, maxAttributeTotal = _level.maxAttributeTotal, maxSpells = _level.maxSpells, maxForeignSpells = _level.maxForeignSpells };
         Navigation.PushAsync(new Step6(selectedProfession, _culture, _species, newLevel));
     }
 
@@ -31,7 +31,7 @@ public partial class Step5 : ContentPage
     {
         Profession selectedProfession = (Profession)ProfessionPicker.SelectedItem;
 
-        APBudget.Text = $"AP-Konto: {_level.APAvailable - selectedProfession.AP}";
+        ApBudget.Text = $"AP-Konto: {_level.apAvailable - selectedProfession.ap}";
 
         PreconditionsLabel.Text = "Voraussetzungen: ";
         PreconditionsLabel.Text += selectedProfession.preconditions;
@@ -49,7 +49,7 @@ public partial class Step5 : ContentPage
         SkillsLabel.Text += Utility.ListToString(selectedProfession.skills, 3);
     }
 
-    [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute]
+    [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
     private void Back(object sender, EventArgs e)
     {
         Navigation.PopAsync();

@@ -1,4 +1,4 @@
-﻿namespace dsa5.Abstractions
+﻿namespace Client.Abstractions
 {
 
     public class Utility
@@ -12,19 +12,18 @@
 
             if (list.Count == 0) return "Keine";
 
-            int linebreakCounter = 0;
+            int counter = 0;
             foreach (string item in list)
             {
                 completeString += $"{item}, ";
-                linebreakCounter++;
-                if (linebreakCounter % breakAfter == 0)
+                counter++;
+                if (counter % breakAfter == 0)
                 {
                     completeString += "\n";
                 }
             }
 
-            if (completeString.EndsWith("\n")) completeString = completeString.Remove(completeString.Length - 3);
-            else completeString = completeString.Remove(completeString.Length - 2);
+            completeString = completeString.EndsWith("\n") ? completeString.Remove(completeString.Length - 3) : completeString.Remove(completeString.Length - 2);
 
             return completeString;
         }

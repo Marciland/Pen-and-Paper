@@ -1,4 +1,4 @@
-﻿namespace dsa5.Dataclasses
+﻿namespace Client.Dataclasses
 {
     public class SpecialSkill
     {
@@ -6,7 +6,7 @@
         public string description;
         public string precondition;
         public bool preconditionMet;
-        public int AP;
+        public int ap;
     }
 
 }

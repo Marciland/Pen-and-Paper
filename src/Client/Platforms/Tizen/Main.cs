@@ -2,7 +2,7 @@ using System;
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
 
-namespace dsa5;
+namespace Client;
 
 class Program : MauiApplication
 {

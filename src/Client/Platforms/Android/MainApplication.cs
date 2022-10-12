@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace dsa5;
+namespace Client;
 
 [Application]
 public class MainApplication : MauiApplication

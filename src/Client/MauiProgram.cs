@@ -1,6 +1,6 @@
-﻿namespace dsa5;
+﻿namespace Client;
 
-[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute]
+[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public static class MauiProgram
 {
     public static MauiApp CreateMauiApp()

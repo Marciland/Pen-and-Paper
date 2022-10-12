@@ -3,7 +3,7 @@
              NavigationPage.HasBackButton="False"
              xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="dsa5.Pages.CreateHero.Step3"
+             x:Class="Client.Pages.CreateHero.Step3"
              Title="CreateHero-Step3">
 
     <ScrollView>
@@ -14,7 +14,7 @@
              VerticalOptions="Center">
 
             <Label
-                x:Name="APBudget"
+                x:Name="ApBudget"
                 HorizontalOptions="End"
                 FontSize="20"/>
 
@@ -64,25 +64,25 @@
                     </Grid.ColumnDefinitions>
 
                     <Label
-                        x:Name="LELabel"
+                        x:Name="LeLabel"
                         FontSize="16"
                         Grid.Column="0"
                         Grid.Row="0"/>
 
                     <Label
-                        x:Name="SKLabel"
+                        x:Name="SkLabel"
                         FontSize="16"
                         Grid.Column="1"
                         Grid.Row="0"/>
 
                     <Label
-                        x:Name="ZKLabel"
+                        x:Name="ZkLabel"
                         FontSize="16"
                         Grid.Column="0"
                         Grid.Row="1"/>
 
                     <Label
-                        x:Name="GSLabel"
+                        x:Name="GsLabel"
                         FontSize="16"
                         Grid.Column="1"
                         Grid.Row="1"/>

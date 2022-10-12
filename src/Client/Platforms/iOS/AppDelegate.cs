@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace dsa5;
+namespace Client;
 
 [Register("AppDelegate")]
 public class AppDelegate : MauiUIApplicationDelegate

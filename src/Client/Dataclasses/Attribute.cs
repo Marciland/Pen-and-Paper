@@ -1,4 +1,4 @@
-namespace dsa5.Dataclasses;
+namespace Client.Dataclasses;
 
 public class Attribute
 {

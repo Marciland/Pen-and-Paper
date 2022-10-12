@@ -1,6 +1,6 @@
-﻿namespace dsa5.Pages;
+﻿namespace Client.Pages;
 
-[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute]
+[System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public partial class App : Application
 {
 	public App()

@@ -1,4 +1,4 @@
-namespace dsa5.Dataclasses;
+namespace Client.Dataclasses;
 
 public class Hero
 {
@@ -8,5 +8,4 @@ public class Hero
     public Attribute attributes;
     public string species;
     public List<string> spells;
-
 }

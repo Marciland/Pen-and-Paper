@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace dsa5;
+namespace Client;
 
 public class Program
 {

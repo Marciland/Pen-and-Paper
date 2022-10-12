@@ -1,36 +1,36 @@
-using dsa5.Abstractions;
-using dsa5.Dataclasses;
+using Client.Abstractions;
+using Client.Dataclasses;
 
-namespace dsa5.Pages.CreateHero;
+namespace Client.Pages.CreateHero;
 
 public partial class Step4 : ContentPage
 {
-    private int selectedCulturePackCost = 0;
+    private int _selectedCulturePackCost = 0;
     private readonly Species _species;
     private readonly Level _level;
 
-	public Step4(Species species, Level level)
-	{
+    public Step4(Species species, Level level)
+    {
         _species = species;
         _level = level;
-		InitializeComponent();
-        APBudget.Text = $"AP-Konto: {level.APAvailable}";
+        InitializeComponent();
+        ApBudget.Text = $"AP-Konto: {level.apAvailable}";
         CulturePicker.ItemsSource = Culture.GetCultures();
         CulturePicker.SelectedIndex = 0;
     }
 
     private void Continue(object sender, EventArgs e)
     {
-        Culture selectedCulture = (Culture) CulturePicker.SelectedItem;
+        Culture selectedCulture = (Culture)CulturePicker.SelectedItem;
 
         if (selectedCulture.type != _species.type)
         {
             //display warning: Unübliche Kultur
         }
 
-        if (CulturePackCheckBox.IsChecked == true)
+        if (CulturePackCheckBox.IsChecked)
         {
-            Level newLevel = new () { name = _level.name, APTotal = _level.APTotal, APAvailable = _level.APAvailable - selectedCulture.AP, APSpent = _level.APSpent + selectedCulture.AP, maxAttribute = _level.maxAttribute, maxSkill = _level.maxSkill, maxCombatSkill = _level.maxCombatSkill, maxAttributeTotal = _level.maxAttributeTotal, maxSpells = _level.maxSpells, maxForeignSpells = _level.maxForeignSpells };
+            Level newLevel = new() { name = _level.name, apTotal = _level.apTotal, apAvailable = _level.apAvailable - selectedCulture.ap, apSpent = _level.apSpent + selectedCulture.ap, maxAttribute = _level.maxAttribute, maxSkill = _level.maxSkill, maxCombatSkill = _level.maxCombatSkill, maxAttributeTotal = _level.maxAttributeTotal, maxSpells = _level.maxSpells, maxForeignSpells = _level.maxForeignSpells };
             Navigation.PushAsync(new Step5(selectedCulture, _species, newLevel));
             return;
         }
@@ -41,13 +41,13 @@ public partial class Step4 : ContentPage
 
     private void OnCulturePickerSelectedIndexChanged(object sender, EventArgs e)
     {
-        var picker = (Picker)sender;
+        Picker picker = (Picker)sender;
 
         if (picker.SelectedIndex != -1)
         {
-            Culture selectedCulture = (Culture) picker.SelectedItem;
+            Culture selectedCulture = (Culture)picker.SelectedItem;
 
-            APLabel.Text = $"Kulturpaket Kosten: {selectedCulture.AP}";
+            ApLabel.Text = $"Kulturpaket Kosten: {selectedCulture.ap}";
             SkillsLabel.Text = Utility.ListToString(selectedCulture.skills, 3);
             LanguagesLabel.Text = $"Sprache(n): {selectedCulture.language}";
 
@@ -56,13 +56,13 @@ public partial class Step4 : ContentPage
             {
                 SocialStatusLabel.Text += $"{status} oder ";
             }
-            if(selectedCulture.socialStatus.Count >= 1)
+            if (selectedCulture.socialStatus.Count >= 1)
             {
                 SocialStatusLabel.Text = SocialStatusLabel.Text.Remove(SocialStatusLabel.Text.Length - 6);
             }
 
             CulturePackCheckBox.IsChecked = false;
-            selectedCulturePackCost = selectedCulture.AP;
+            _selectedCulturePackCost = selectedCulture.ap;
 
         }
 
@@ -70,11 +70,11 @@ public partial class Step4 : ContentPage
 
     private void OnCulturePackCheckBoxChanged(object sender, EventArgs e)
     {
-        if (CulturePackCheckBox.IsChecked == true)  APBudget.Text = $"AP-Konto: {_level.APAvailable - selectedCulturePackCost}";
-        if (CulturePackCheckBox.IsChecked == false) APBudget.Text = $"AP-Konto: {_level.APAvailable}";
+        if (CulturePackCheckBox.IsChecked) ApBudget.Text = $"AP-Konto: {_level.apAvailable - _selectedCulturePackCost}";
+        if (!CulturePackCheckBox.IsChecked) ApBudget.Text = $"AP-Konto: {_level.apAvailable}";
     }
 
-    [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute]
+    [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
     private void Back(object sender, EventArgs e)
     {
         Navigation.PopAsync();
