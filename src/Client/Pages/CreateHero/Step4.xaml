@@ -1,119 +1,51 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage NavigationPage.HasNavigationBar="False" 
-             NavigationPage.HasBackButton="False"
-             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Client.Pages.CreateHero.Step4"
-             Title="CreateHero-Step4">
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage NavigationPage.HasNavigationBar="False" NavigationPage.HasBackButton="False" xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Client.Pages.CreateHero.Step4" Title="CreateHero-Step4">
 
     <ScrollView>
 
-        <VerticalStackLayout
-             Spacing="25"
-             Padding="30,0"
-             VerticalOptions="Center">
+        <VerticalStackLayout Spacing="25" Padding="30,0" VerticalOptions="Center">
 
-            <Label
-                x:Name="ApBudget"
-                HorizontalOptions="End"
-                FontSize="20"/>
+            <Label x:Name="ApBudget" HorizontalOptions="End" FontSize="20" />
 
-            <Label 
-                Text="Schritt 4:"
-                HorizontalOptions="Center"
-                FontSize="26"/>
+            <Label Text="Schritt 4:" HorizontalOptions="Center" FontSize="26" />
 
-            <Label 
-                Text="Wähle deine Kultur. Diese entscheidet über Bräuche, Kleidung und Weltsicht des Helden. Weiterhin lernt der Held die passende Sprache und Ortskenntnis."
-                HorizontalOptions="Center"
-                FontSize="18"/>
+            <Label Text="Wähle deine Kultur. Diese entscheidet über Bräuche, Kleidung und Weltsicht des Helden. Weiterhin lernt der Held die passende Sprache und Ortskenntnis." HorizontalOptions="Center" FontSize="18" />
 
-            <Label 
-                Text="(Eine für die Spezies unübliche Kultur erfordert eine Absprache mit dem Spielleiter)"
-                HorizontalOptions="Center"
-                FontSize="18"/>
+            <Label Text="(Eine für die Spezies unübliche Kultur erfordert eine Absprache mit dem Spielleiter)" HorizontalOptions="Center" FontSize="18" />
 
-            <Label 
-                Text="Optional kann ein Kulturpaket gewählt werden. Dieses kostet AP und enthält zur Kultur passende Talente."
-                HorizontalOptions="Center"
-                FontSize="18"/>
+            <Label Text="Optional kann ein Kulturpaket gewählt werden. Dieses kostet AP und enthält zur Kultur passende Talente." HorizontalOptions="Center" FontSize="18" />
 
-            <HorizontalStackLayout
-                Spacing="25"
-                HorizontalOptions="Center"
-                VerticalOptions="Center">
+            <HorizontalStackLayout Spacing="25" HorizontalOptions="Center" VerticalOptions="Center">
 
-                <Picker
-                    x:Name="CulturePicker"
-                    SelectedIndexChanged="OnCulturePickerSelectedIndexChanged"
-                    Title="Wähle eine Kultur"
-                    FontSize="16"/>
+                <Picker x:Name="CulturePicker" SelectedIndexChanged="OnCulturePickerSelectedIndexChanged" Title="Wähle eine Kultur" FontSize="16" />
 
-                <Border
-                    Padding="10">
+                <Border Padding="10">
 
-                    <Grid
-                        RowSpacing="5"
-                        ColumnSpacing="10">
+                    <Grid RowSpacing="5" ColumnSpacing="10">
 
                         <Grid.RowDefinitions>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
 
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
                         </Grid.ColumnDefinitions>
 
-                        <Label
-                            x:Name="LanguagesLabel"
-                            FontSize="16"
-                            Grid.Column="0"
-                            Grid.Row="0"
-                            HorizontalOptions="Center"/>
+                        <Label x:Name="LanguagesLabel" FontSize="16" Grid.Column="0" Grid.Row="0" HorizontalOptions="Center" />
 
-                        <Label
-                            x:Name="SocialStatusLabel"
-                            FontSize="16"
-                            Grid.Column="1"
-                            Grid.Row="0"
-                            HorizontalOptions="Center"/>
+                        <Label x:Name="SocialStatusLabel" FontSize="16" Grid.Column="1" Grid.Row="0" HorizontalOptions="Center" />
 
-                        <CheckBox
-                            x:Name="CulturePackCheckBox"
-                            CheckedChanged="OnCulturePackCheckBoxChanged"
-                            Grid.Column="1"
-                            Grid.Row="1"
-                            HorizontalOptions="Start"
-                            VerticalOptions="Center"/>
+                        <CheckBox x:Name="CulturePackCheckBox" CheckedChanged="OnCulturePackCheckBoxChanged" Grid.Column="1" Grid.Row="1" HorizontalOptions="Start" VerticalOptions="Center" />
 
-                        <Label
-                            x:Name="ApLabel"
-                            FontSize="16"
-                            Grid.Column="0"
-                            Grid.Row="1"
-                            HorizontalOptions="End"
-                            VerticalOptions="Center"/>
+                        <Label x:Name="ApLabel" FontSize="16" Grid.Column="0" Grid.Row="1" HorizontalOptions="End" VerticalOptions="Center" />
 
-                        <Label
-                            Text="Talente durch das Kulturpaket:"
-                            FontSize="16"
-                            Grid.Column="0"
-                            Grid.Row="2"
-                            Grid.ColumnSpan="2"
-                            HorizontalOptions="Center"/>
-                        
-                        <Label
-                            x:Name="SkillsLabel"
-                            LineBreakMode="WordWrap"
-                            FontSize="16"
-                            Grid.Column="0"
-                            Grid.Row="3"
-                            Grid.ColumnSpan="2"
-                            HorizontalOptions="Center"/>
+                        <Label Text="Talente durch das Kulturpaket:" FontSize="16" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" HorizontalOptions="Center" />
+
+                        <Label x:Name="SkillsLabel" LineBreakMode="WordWrap" FontSize="16" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" HorizontalOptions="Center" />
 
                     </Grid>
 
@@ -121,17 +53,11 @@
 
             </HorizontalStackLayout>
 
-            <HorizontalStackLayout
-                Spacing="25"
-                HorizontalOptions="Center">
+            <HorizontalStackLayout Spacing="25" HorizontalOptions="Center">
 
-                <Button
-                    Text="Weiter"
-                    Clicked="Continue"/>
+                <Button Text="Weiter" Clicked="Continue" />
 
-                <Button
-                    Text="Zurück"
-                    Clicked="Back"/>
+                <Button Text="Zurück" Clicked="Back" />
 
             </HorizontalStackLayout>
 

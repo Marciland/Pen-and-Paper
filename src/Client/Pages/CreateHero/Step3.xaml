@@ -1,125 +1,61 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage NavigationPage.HasNavigationBar="False" 
-             NavigationPage.HasBackButton="False"
-             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Client.Pages.CreateHero.Step3"
-             Title="CreateHero-Step3">
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage NavigationPage.HasNavigationBar="False" NavigationPage.HasBackButton="False" xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Client.Pages.CreateHero.Step3" Title="CreateHero-Step3">
 
     <ScrollView>
 
-        <VerticalStackLayout
-             Spacing="25"
-             Padding="30,0"
-             VerticalOptions="Center">
+        <VerticalStackLayout Spacing="25" Padding="30,0" VerticalOptions="Center">
 
-            <Label
-                x:Name="ApBudget"
-                HorizontalOptions="End"
-                FontSize="20"/>
+            <Label x:Name="ApBudget" HorizontalOptions="End" FontSize="20" />
 
-            <Label 
-                Text="Schritt 3:"
-                HorizontalOptions="Center"
-                FontSize="26"/>
+            <Label Text="Schritt 3:" HorizontalOptions="Center" FontSize="26" />
 
-            <Label 
-                Text="Wähle deine Spezies. Diese entscheidet über dein Aussehen, Grundwerte und Attribute."
-                HorizontalOptions="Center"
-                FontSize="18"/>
+            <Label Text="Wähle deine Spezies. Diese entscheidet über dein Aussehen, Grundwerte und Attribute." HorizontalOptions="Center" FontSize="18" />
 
-            <Label 
-                Text="(Achtung! Untypische Vor- und Nachteile, sowie unübliche Kulturen zu der Spezies bedürfen einer Absprache mit dem Spielleiter)"
-                HorizontalOptions="Center"
-                FontSize="18"/>
+            <Label Text="(Achtung! Untypische Vor- und Nachteile, sowie unübliche Kulturen zu der Spezies bedürfen einer Absprache mit dem Spielleiter)" HorizontalOptions="Center" FontSize="18" />
 
-            <HorizontalStackLayout
-                Spacing="25"
-                HorizontalOptions="Center"
-                VerticalOptions="Center">
+            <HorizontalStackLayout Spacing="25" HorizontalOptions="Center" VerticalOptions="Center">
 
-                <Picker
-                    x:Name="SpeciesPicker"
-                    SelectedIndexChanged="OnSpeciesPickerSelectedIndexChanged"
-                    Title="Wähle eine Spezies"
-                    FontSize="16"/>
+                <Picker x:Name="SpeciesPicker" SelectedIndexChanged="OnSpeciesPickerSelectedIndexChanged" Title="Wähle eine Spezies" FontSize="16" />
 
-                <Border
-                    Padding="10">
-                
-                <Grid
-                    RowSpacing="5"
-                    ColumnSpacing="10">
+                <Border Padding="10">
 
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
+                    <Grid RowSpacing="5" ColumnSpacing="10">
 
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                    </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
 
-                    <Label
-                        x:Name="LeLabel"
-                        FontSize="16"
-                        Grid.Column="0"
-                        Grid.Row="0"/>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
 
-                    <Label
-                        x:Name="SkLabel"
-                        FontSize="16"
-                        Grid.Column="1"
-                        Grid.Row="0"/>
+                        <Label x:Name="LeLabel" FontSize="16" Grid.Column="0" Grid.Row="0" />
 
-                    <Label
-                        x:Name="ZkLabel"
-                        FontSize="16"
-                        Grid.Column="0"
-                        Grid.Row="1"/>
+                        <Label x:Name="SkLabel" FontSize="16" Grid.Column="1" Grid.Row="0" />
 
-                    <Label
-                        x:Name="GsLabel"
-                        FontSize="16"
-                        Grid.Column="1"
-                        Grid.Row="1"/>
+                        <Label x:Name="ZkLabel" FontSize="16" Grid.Column="0" Grid.Row="1" />
 
-                    <Label
-                        x:Name="AttributeLabel"
-                        FontSize="16"
-                        Grid.Column="0"
-                        Grid.Row="2"
-                        Grid.ColumnSpan="2"
-                        HorizontalOptions="Center"/>
+                        <Label x:Name="GsLabel" FontSize="16" Grid.Column="1" Grid.Row="1" />
 
-                    <Label
-                        x:Name="PerkLabel"
-                        FontSize="16"
-                        Grid.Column="0"
-                        Grid.Row="3"
-                        Grid.ColumnSpan="2"
-                        HorizontalOptions="Center"/>
+                        <Label x:Name="AttributeLabel" FontSize="16" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" HorizontalOptions="Center" />
 
-                </Grid>
+                        <Label x:Name="PerkLabel" FontSize="16" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" HorizontalOptions="Center" />
+
+                    </Grid>
 
                 </Border>
 
             </HorizontalStackLayout>
-            
-            <HorizontalStackLayout
-                Spacing="25"
-                HorizontalOptions="Center">
 
-                <Button
-                    Text="Weiter"
-                    Clicked="Continue"/>
+            <HorizontalStackLayout Spacing="25" HorizontalOptions="Center">
 
-                <Button
-                    Text="Zurück"
-                    Clicked="Back"/>
+                <Button Text="Weiter" Clicked="Continue" />
+
+                <Button Text="Zurück" Clicked="Back" />
 
             </HorizontalStackLayout>
 

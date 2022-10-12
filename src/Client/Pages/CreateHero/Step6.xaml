@@ -1,309 +1,123 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage NavigationPage.HasNavigationBar="False" 
-             NavigationPage.HasBackButton="False"
-             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Client.Pages.CreateHero.Step6"
-             Title="CreateHero-Step6">
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage NavigationPage.HasNavigationBar="False" NavigationPage.HasBackButton="False" xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Client.Pages.CreateHero.Step6" Title="CreateHero-Step6">
 
     <ScrollView>
 
-        <VerticalStackLayout
-             Spacing="25"
-             Padding="30,0"
-             VerticalOptions="Center">
+        <VerticalStackLayout Spacing="25" Padding="30,0" VerticalOptions="Center">
 
-            <Label
-                x:Name="ApBudget"
-                HorizontalOptions="End"
-                FontSize="20"/>
+            <Label x:Name="ApBudget" HorizontalOptions="End" FontSize="20" />
 
-            <Label 
-                Text="Schritt 6:"
-                HorizontalOptions="Center"
-                FontSize="26"/>
+            <Label Text="Schritt 6:" HorizontalOptions="Center" FontSize="26" />
 
-            <HorizontalStackLayout
-                HorizontalOptions="Center"
-                Spacing="50">
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="50">
 
-                <Grid
-                    RowSpacing="5"
-                    ColumnSpacing="10">
+                <Grid RowSpacing="5" ColumnSpacing="10">
 
                     <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
                     </Grid.RowDefinitions>
 
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
                     </Grid.ColumnDefinitions>
 
-                    <Label
-                        Text="Mut"
-                        FontSize="18"
-                        Grid.Column="0"
-                        Grid.Row="0"
-                        VerticalOptions="Center"/>
+                    <Label Text="Mut" FontSize="18" Grid.Column="0" Grid.Row="0" VerticalOptions="Center" />
 
-                    <Label
-                        Text="Klugheit"
-                        FontSize="18"
-                        Grid.Column="0"
-                        Grid.Row="1"
-                        VerticalOptions="Center"/>
+                    <Label Text="Klugheit" FontSize="18" Grid.Column="0" Grid.Row="1" VerticalOptions="Center" />
 
-                    <Label
-                        Text="Intuition"
-                        FontSize="18"
-                        Grid.Column="0"
-                        Grid.Row="2"
-                        VerticalOptions="Center"/>
+                    <Label Text="Intuition" FontSize="18" Grid.Column="0" Grid.Row="2" VerticalOptions="Center" />
 
-                    <Label
-                        Text="Charisma"
-                        FontSize="18"
-                        Grid.Column="0"
-                        Grid.Row="3"
-                        VerticalOptions="Center"/>
+                    <Label Text="Charisma" FontSize="18" Grid.Column="0" Grid.Row="3" VerticalOptions="Center" />
 
-                    <Label
-                        x:Name="CourageLabel"
-                        Text="8"
-                        FontSize="18"
-                        Grid.Column="1"
-                        Grid.Row="0"
-                        VerticalOptions="Center"/>
+                    <Label x:Name="CourageLabel" Text="8" FontSize="18" Grid.Column="1" Grid.Row="0" VerticalOptions="Center" />
 
-                    <Label
-                        x:Name="ClevernessLabel"
-                        Text="8"
-                        FontSize="18"
-                        Grid.Column="1"
-                        Grid.Row="1"
-                        VerticalOptions="Center"/>
+                    <Label x:Name="ClevernessLabel" Text="8" FontSize="18" Grid.Column="1" Grid.Row="1" VerticalOptions="Center" />
 
-                    <Label
-                        x:Name="IntuitionLabel"
-                        Text="8"
-                        FontSize="18"
-                        Grid.Column="1"
-                        Grid.Row="2"
-                        VerticalOptions="Center"/>
+                    <Label x:Name="IntuitionLabel" Text="8" FontSize="18" Grid.Column="1" Grid.Row="2" VerticalOptions="Center" />
 
-                    <Label
-                        x:Name="CharismaLabel"
-                        Text="8"
-                        FontSize="18"
-                        Grid.Column="1"
-                        Grid.Row="3"
-                        VerticalOptions="Center"/>
+                    <Label x:Name="CharismaLabel" Text="8" FontSize="18" Grid.Column="1" Grid.Row="3" VerticalOptions="Center" />
 
-                    <Button
-                        x:Name="CouragePlus"
-                        Text="+"
-                        Grid.Column="2"
-                        Grid.Row="0"
-                        Clicked="AddAttribute"/>
+                    <Button x:Name="CouragePlus" Text="+" Grid.Column="2" Grid.Row="0" Clicked="AddAttribute" />
 
-                    <Button
-                        x:Name="ClevernessPlus"
-                        Text="+"
-                        Grid.Column="2"
-                        Grid.Row="1"
-                        Clicked="AddAttribute"/>
+                    <Button x:Name="ClevernessPlus" Text="+" Grid.Column="2" Grid.Row="1" Clicked="AddAttribute" />
 
-                    <Button
-                        x:Name="IntuitionPlus"
-                        Text="+"
-                        Grid.Column="2"
-                        Grid.Row="2"
-                        Clicked="AddAttribute"/>
+                    <Button x:Name="IntuitionPlus" Text="+" Grid.Column="2" Grid.Row="2" Clicked="AddAttribute" />
 
-                    <Button
-                        x:Name="CharismaPlus"
-                        Text="+"
-                        Grid.Column="2"
-                        Grid.Row="3"
-                        Clicked="AddAttribute"/>
+                    <Button x:Name="CharismaPlus" Text="+" Grid.Column="2" Grid.Row="3" Clicked="AddAttribute" />
 
-                    <Button
-                        x:Name="CourageMinus"
-                        Text="-"
-                        Grid.Column="3"
-                        Grid.Row="0"/>
+                    <Button x:Name="CourageMinus" Text="-" Grid.Column="3" Grid.Row="0" />
 
-                    <Button
-                        x:Name="ClevernessMinus"
-                        Text="-"
-                        Grid.Column="3"
-                        Grid.Row="1"/>
+                    <Button x:Name="ClevernessMinus" Text="-" Grid.Column="3" Grid.Row="1" />
 
-                    <Button
-                        x:Name="IntuitionMinus"
-                        Text="-"
-                        Grid.Column="3"
-                        Grid.Row="2"/>
+                    <Button x:Name="IntuitionMinus" Text="-" Grid.Column="3" Grid.Row="2" />
 
-                    <Button
-                        x:Name="CharismaMinus"
-                        Text="-"
-                        Grid.Column="3"
-                        Grid.Row="3"/>
+                    <Button x:Name="CharismaMinus" Text="-" Grid.Column="3" Grid.Row="3" />
 
                 </Grid>
 
-                <Grid
-                    RowSpacing="5"
-                    ColumnSpacing="10">
+                <Grid RowSpacing="5" ColumnSpacing="10">
 
                     <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
                     </Grid.RowDefinitions>
 
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
                     </Grid.ColumnDefinitions>
 
-                    <Label
-                        Text="Fingerfertigkeit"
-                        FontSize="18"
-                        Grid.Column="0"
-                        Grid.Row="0"
-                        VerticalOptions="Center"/>
+                    <Label Text="Fingerfertigkeit" FontSize="18" Grid.Column="0" Grid.Row="0" VerticalOptions="Center" />
 
-                    <Label
-                        Text="Gewandtheit"
-                        FontSize="18"
-                        Grid.Column="0"
-                        Grid.Row="1"
-                        VerticalOptions="Center"/>
+                    <Label Text="Gewandtheit" FontSize="18" Grid.Column="0" Grid.Row="1" VerticalOptions="Center" />
 
-                    <Label
-                        Text="Konstitution"
-                        FontSize="18"
-                        Grid.Column="0"
-                        Grid.Row="2"
-                        VerticalOptions="Center"/>
+                    <Label Text="Konstitution" FontSize="18" Grid.Column="0" Grid.Row="2" VerticalOptions="Center" />
 
-                    <Label
-                        Text="Körperkraft"
-                        FontSize="18"
-                        Grid.Column="0"
-                        Grid.Row="3"
-                        VerticalOptions="Center"/>
+                    <Label Text="Körperkraft" FontSize="18" Grid.Column="0" Grid.Row="3" VerticalOptions="Center" />
 
-                    <Label
-                        x:Name="DexterityLabel"
-                        Text="8"
-                        FontSize="18"
-                        Grid.Column="1"
-                        Grid.Row="0"
-                        VerticalOptions="Center"/>
+                    <Label x:Name="DexterityLabel" Text="8" FontSize="18" Grid.Column="1" Grid.Row="0" VerticalOptions="Center" />
 
-                    <Label
-                        x:Name="AgilityLabel"
-                        Text="8"
-                        FontSize="18"
-                        Grid.Column="1"
-                        Grid.Row="1"
-                        VerticalOptions="Center"/>
+                    <Label x:Name="AgilityLabel" Text="8" FontSize="18" Grid.Column="1" Grid.Row="1" VerticalOptions="Center" />
 
-                    <Label
-                        x:Name="ConstitutionLabel"
-                        Text="8"
-                        FontSize="18"
-                        Grid.Column="1"
-                        Grid.Row="2"
-                        VerticalOptions="Center"/>
+                    <Label x:Name="ConstitutionLabel" Text="8" FontSize="18" Grid.Column="1" Grid.Row="2" VerticalOptions="Center" />
 
-                    <Label
-                        x:Name="StrengthLabel"
-                        Text="8"
-                        FontSize="18"
-                        Grid.Column="1"
-                        Grid.Row="3"
-                        VerticalOptions="Center"/>
+                    <Label x:Name="StrengthLabel" Text="8" FontSize="18" Grid.Column="1" Grid.Row="3" VerticalOptions="Center" />
 
-                    <Button
-                        x:Name="DexterityPlus"
-                        Text="+"
-                        Grid.Column="2"
-                        Grid.Row="0"
-                        Clicked="AddAttribute"/>
+                    <Button x:Name="DexterityPlus" Text="+" Grid.Column="2" Grid.Row="0" Clicked="AddAttribute" />
 
-                    <Button
-                        x:Name="AgilityPlus"
-                        Text="+"
-                        Grid.Column="2"
-                        Grid.Row="1"
-                        Clicked="AddAttribute"/>
+                    <Button x:Name="AgilityPlus" Text="+" Grid.Column="2" Grid.Row="1" Clicked="AddAttribute" />
 
-                    <Button
-                        x:Name="ConstitutionPlus"
-                        Text="+"
-                        Grid.Column="2"
-                        Grid.Row="2"
-                        Clicked="AddAttribute"/>
+                    <Button x:Name="ConstitutionPlus" Text="+" Grid.Column="2" Grid.Row="2" Clicked="AddAttribute" />
 
-                    <Button
-                        x:Name="StrengthPlus"
-                        Text="+"
-                        Grid.Column="2"
-                        Grid.Row="3"
-                        Clicked="AddAttribute"/>
+                    <Button x:Name="StrengthPlus" Text="+" Grid.Column="2" Grid.Row="3" Clicked="AddAttribute" />
 
-                    <Button
-                        x:Name="DexterityMinus"
-                        Text="-"
-                        Grid.Column="3"
-                        Grid.Row="0"/>
+                    <Button x:Name="DexterityMinus" Text="-" Grid.Column="3" Grid.Row="0" />
 
-                    <Button
-                        x:Name="AgilityMinus"
-                        Text="-"
-                        Grid.Column="3"
-                        Grid.Row="1"/>
+                    <Button x:Name="AgilityMinus" Text="-" Grid.Column="3" Grid.Row="1" />
 
-                    <Button
-                        x:Name="ConstitutionMinus"
-                        Text="-"
-                        Grid.Column="3"
-                        Grid.Row="2"/>
+                    <Button x:Name="ConstitutionMinus" Text="-" Grid.Column="3" Grid.Row="2" />
 
-                    <Button
-                        x:Name="StrengthMinus"
-                        Text="-"
-                        Grid.Column="3"
-                        Grid.Row="3"/>
+                    <Button x:Name="StrengthMinus" Text="-" Grid.Column="3" Grid.Row="3" />
 
                 </Grid>
 
             </HorizontalStackLayout>
 
-            <HorizontalStackLayout
-                HorizontalOptions="Center"
-                Spacing="25">
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="25">
 
-                <Button
-                    Text="Weiter"
-                    Clicked="Continue"/>
+                <Button Text="Weiter" Clicked="Continue" />
 
-                <Button
-                    Text="Zurück"
-                    Clicked="Back"/>
+                <Button Text="Zurück" Clicked="Back" />
 
             </HorizontalStackLayout>
 

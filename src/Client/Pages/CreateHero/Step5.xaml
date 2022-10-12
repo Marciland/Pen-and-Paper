@@ -1,108 +1,48 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage NavigationPage.HasNavigationBar="False" 
-             NavigationPage.HasBackButton="False"
-             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Client.Pages.CreateHero.Step5"
-             Title="CreateHero-Step5">
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage NavigationPage.HasNavigationBar="False" NavigationPage.HasBackButton="False" xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Client.Pages.CreateHero.Step5" Title="CreateHero-Step5">
 
     <ScrollView>
 
-        <VerticalStackLayout
-             Spacing="25"
-             Padding="30,0"
-             VerticalOptions="Center">
+        <VerticalStackLayout Spacing="25" Padding="30,0" VerticalOptions="Center">
 
-            <Label
-                x:Name="ApBudget"
-                HorizontalOptions="End"
-                FontSize="20"/>
+            <Label x:Name="ApBudget" HorizontalOptions="End" FontSize="20" />
 
-            <Label 
-                Text="Schritt 5:"
-                HorizontalOptions="Center"
-                FontSize="26"/>
+            <Label Text="Schritt 5:" HorizontalOptions="Center" FontSize="26" />
 
-            <Label 
-                Text="Wähle deine Profession. Sie entscheidet über die Erfahrung und Können deines Helden."
-                HorizontalOptions="Center"
-                FontSize="18"/>
+            <Label Text="Wähle deine Profession. Sie entscheidet über die Erfahrung und Können deines Helden." HorizontalOptions="Center" FontSize="18" />
 
-            <Label 
-                Text="(Eine für deine Kultur unübliche Profession oder eine Eigenkreation erfordern eine Absprache mit dem Spielleiter)"
-                HorizontalOptions="Center"
-                FontSize="18"/>
+            <Label Text="(Eine für deine Kultur unübliche Profession oder eine Eigenkreation erfordern eine Absprache mit dem Spielleiter)" HorizontalOptions="Center" FontSize="18" />
 
-            <Label 
-                Text="Professionen sind geschlechtsunabhängig."
-                HorizontalOptions="Center"
-                FontSize="18"/>
+            <Label Text="Professionen sind geschlechtsunabhängig." HorizontalOptions="Center" FontSize="18" />
 
-            <HorizontalStackLayout
-                Spacing="25"
-                HorizontalOptions="Center"
-                VerticalOptions="Center">
+            <HorizontalStackLayout Spacing="25" HorizontalOptions="Center" VerticalOptions="Center">
 
-                <Picker
-                    x:Name="ProfessionPicker"
-                    SelectedIndexChanged="OnProfessionPickerSelectedIndexChanged"
-                    Title="Wähle eine Profession"
-                    FontSize="16"/>
+                <Picker x:Name="ProfessionPicker" SelectedIndexChanged="OnProfessionPickerSelectedIndexChanged" Title="Wähle eine Profession" FontSize="16" />
 
-                <Border
-                    Padding="10">
+                <Border Padding="10">
 
-                    <Grid
-                        RowSpacing="5"
-                        ColumnSpacing="10">
+                    <Grid RowSpacing="5" ColumnSpacing="10">
 
                         <Grid.RowDefinitions>
-                            <RowDefinition/>
-                            <RowDefinition/>
-                            <RowDefinition Height="Auto"/>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition Height="Auto" />
                         </Grid.RowDefinitions>
 
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
 
-                        <Label
-                            x:Name="PreconditionsLabel"
-                            FontSize="16"
-                            Grid.Column="0"
-                            Grid.Row="0"
-                            HorizontalOptions="Center"/>
+                        <Label x:Name="PreconditionsLabel" FontSize="16" Grid.Column="0" Grid.Row="0" HorizontalOptions="Center" />
 
-                        <Label
-                            x:Name="SpecialSkillsLabel"
-                            FontSize="16"
-                            Grid.Column="1"
-                            Grid.Row="0"
-                            HorizontalOptions="Center"/>
+                        <Label x:Name="SpecialSkillsLabel" FontSize="16" Grid.Column="1" Grid.Row="0" HorizontalOptions="Center" />
 
-                        <Label
-                            x:Name="CombatSkillsLabel"
-                            FontSize="16"
-                            Grid.Column="0"
-                            Grid.Row="1"
-                            HorizontalOptions="Center"/>
+                        <Label x:Name="CombatSkillsLabel" FontSize="16" Grid.Column="0" Grid.Row="1" HorizontalOptions="Center" />
 
-                        <Label
-                            x:Name="SpellsLabel"
-                            FontSize="16"
-                            Grid.Column="1"
-                            Grid.Row="1"
-                            HorizontalOptions="Center"/>
+                        <Label x:Name="SpellsLabel" FontSize="16" Grid.Column="1" Grid.Row="1" HorizontalOptions="Center" />
 
-                        <Label
-                            x:Name="SkillsLabel"
-                            LineBreakMode="WordWrap"
-                            FontSize="16"
-                            Grid.Column="0"
-                            Grid.Row="2"
-                            Grid.ColumnSpan="2"
-                            HorizontalOptions="Center"/>
+                        <Label x:Name="SkillsLabel" LineBreakMode="WordWrap" FontSize="16" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" HorizontalOptions="Center" />
 
                     </Grid>
 
@@ -110,17 +50,11 @@
 
             </HorizontalStackLayout>
 
-            <HorizontalStackLayout
-                Spacing="25"
-                HorizontalOptions="Center">
+            <HorizontalStackLayout Spacing="25" HorizontalOptions="Center">
 
-                <Button
-                    Text="Weiter"
-                    Clicked="Continue"/>
+                <Button Text="Weiter" Clicked="Continue" />
 
-                <Button
-                    Text="Zurück"
-                    Clicked="Back"/>
+                <Button Text="Zurück" Clicked="Back" />
 
             </HorizontalStackLayout>
 

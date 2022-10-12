@@ -1,54 +1,28 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage NavigationPage.HasNavigationBar="False" 
-             NavigationPage.HasBackButton="False"
-             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Client.Pages.CreateHero.Step1"
-             Title="CreateHero-Step1">
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage NavigationPage.HasNavigationBar="False" NavigationPage.HasBackButton="False" xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Client.Pages.CreateHero.Step1" Title="CreateHero-Step1">
 
     <ScrollView>
-        
-        <VerticalStackLayout
-             Spacing="25"
-             Padding="30,0"
-             VerticalOptions="Center">
-            
-            <Label 
-                Text="Schritt 1:"
-                HorizontalOptions="Center"
-                FontSize="26"/>
 
-            <Label 
-                Text="Was für einen Helden möchtest du spielen?"
-                HorizontalOptions="Center"
-                FontSize="18"/>
+        <VerticalStackLayout Spacing="25" Padding="30,0" VerticalOptions="Center">
 
-            <Label 
-                Text="Verschaffe dir einen Überblick über die möglichen Professionen oder kläre mit deinem Spielleiter ab, ob eine eigens erstellte Profession möglich ist."
-                HorizontalOptions="Center"
-                FontSize="18"/>
+            <Label Text="Schritt 1:" HorizontalOptions="Center" FontSize="26" />
 
-            <Label 
-                Text="Schreibe dir eine Hintergrundgeschichte zu deinem Helden auf und versuche dich einem fremden in Aventurien vorzustellen."
-                HorizontalOptions="Center"
-                FontSize="18"/>
+            <Label Text="Was für einen Helden möchtest du spielen?" HorizontalOptions="Center" FontSize="18" />
 
-            <HorizontalStackLayout
-                Spacing="25"
-                HorizontalOptions="Center">
+            <Label Text="Verschaffe dir einen Überblick über die möglichen Professionen oder kläre mit deinem Spielleiter ab, ob eine eigens erstellte Profession möglich ist." HorizontalOptions="Center" FontSize="18" />
 
-                <Button
-                    Text="Weiter"
-                    Clicked="Continue"/>
+            <Label Text="Schreibe dir eine Hintergrundgeschichte zu deinem Helden auf und versuche dich einem fremden in Aventurien vorzustellen." HorizontalOptions="Center" FontSize="18" />
 
-                <Button
-                    Text="Zurück"
-                    Clicked="Back"/>
+            <HorizontalStackLayout Spacing="25" HorizontalOptions="Center">
+
+                <Button Text="Weiter" Clicked="Continue" />
+
+                <Button Text="Zurück" Clicked="Back" />
 
             </HorizontalStackLayout>
-            
+
         </VerticalStackLayout>
-        
+
     </ScrollView>
 
 </ContentPage>
