@@ -29,7 +29,7 @@ jobs:
       - name: Install MAUI Workload
         run: dotnet workload install maui --ignore-failed-sources
       - name: Restore Dependencies
-        run: dotnet restore src/Client/v.csproj
+        run: dotnet restore src/Client/Client.csproj
       - name: Build MAUI Android
         run: dotnet publish src/Client/Client.csproj -c Release -f net6.0-android --no-restore
       - name: Upload Android Artifact
