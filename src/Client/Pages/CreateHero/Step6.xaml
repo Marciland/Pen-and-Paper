@@ -57,13 +57,13 @@
 
                     <Button ClassId="CharismaPlus" Text="+" Grid.Column="2" Grid.Row="3" Clicked="AddAttribute" />
 
-                    <Button ClassId="CourageMinus" Text="-" Grid.Column="3" Grid.Row="0" />
+                    <Button ClassId="CourageMinus" Text="-" Grid.Column="3" Grid.Row="0" Clicked="SubAttribute" />
 
-                    <Button ClassId="ClevernessMinus" Text="-" Grid.Column="3" Grid.Row="1" />
+                    <Button ClassId="ClevernessMinus" Text="-" Grid.Column="3" Grid.Row="1" Clicked="SubAttribute" />
 
-                    <Button ClassId="IntuitionMinus" Text="-" Grid.Column="3" Grid.Row="2" />
+                    <Button ClassId="IntuitionMinus" Text="-" Grid.Column="3" Grid.Row="2" Clicked="SubAttribute" />
 
-                    <Button ClassId="CharismaMinus" Text="-" Grid.Column="3" Grid.Row="3" />
+                    <Button ClassId="CharismaMinus" Text="-" Grid.Column="3" Grid.Row="3" Clicked="SubAttribute" />
 
                 </Grid>
 
@@ -107,13 +107,13 @@
 
                     <Button ClassId="StrengthPlus" Text="+" Grid.Column="2" Grid.Row="3" Clicked="AddAttribute" />
 
-                    <Button ClassId="DexterityMinus" Text="-" Grid.Column="3" Grid.Row="0" />
+                    <Button ClassId="DexterityMinus" Text="-" Grid.Column="3" Grid.Row="0" Clicked="SubAttribute" />
 
-                    <Button ClassId="AgilityMinus" Text="-" Grid.Column="3" Grid.Row="1" />
+                    <Button ClassId="AgilityMinus" Text="-" Grid.Column="3" Grid.Row="1" Clicked="SubAttribute" />
 
-                    <Button ClassId="ConstitutionMinus" Text="-" Grid.Column="3" Grid.Row="2" />
+                    <Button ClassId="ConstitutionMinus" Text="-" Grid.Column="3" Grid.Row="2" Clicked="SubAttribute" />
 
-                    <Button ClassId="StrengthMinus" Text="-" Grid.Column="3" Grid.Row="3" />
+                    <Button ClassId="StrengthMinus" Text="-" Grid.Column="3" Grid.Row="3" Clicked="SubAttribute" />
 
                 </Grid>
 
