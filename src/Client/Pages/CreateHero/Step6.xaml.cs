@@ -1,4 +1,5 @@
 using Client.Dataclasses;
+using Attribute = Client.Dataclasses.Attribute;
 
 namespace Client.Pages.CreateHero;
 
@@ -9,6 +10,7 @@ public partial class Step6
     private readonly Species _species;
     private readonly Level _level;
     private int _attributeCounter = 64; //initially every attribute is 8, which results in an initial value of 8*8=64
+    private int _apSpentOnAttributes = 0;
 
     public Step6(Profession profession, Culture culture, Species species, Level level)
     {
@@ -23,7 +25,9 @@ public partial class Step6
 
     private void Continue(object sender, EventArgs e)
     {
-        //create new level to pass on to step 7 still needs to be refined on miro
+        Level newLevel = new() { name = _level.name, apTotal = _level.apTotal, apAvailable = _level.apAvailable - _apSpentOnAttributes, apSpent = _level.apSpent + _apSpentOnAttributes, maxAttribute = _level.maxAttribute, maxSkill = _level.maxSkill, maxCombatSkill = _level.maxCombatSkill, maxAttributeTotal = _level.maxAttributeTotal, maxSpells = _level.maxSpells, maxForeignSpells = _level.maxForeignSpells };
+        Attribute attributes = new() { courage = int.Parse(CourageLabel.Text), cleverness = int.Parse(ClevernessLabel.Text), intuition = int.Parse(IntuitionLabel.Text), charisma = int.Parse(CharismaLabel.Text), dexterity = int.Parse(DexterityLabel.Text), agility = int.Parse(AgilityLabel.Text), constitution = int.Parse(ConstitutionLabel.Text), strength = int.Parse(StrengthLabel.Text) };
+        Navigation.PushAsync(new Step7(attributes, _profession, _culture, _species, newLevel));
     }
 
     private void AddAttribute(object sender, EventArgs e)
