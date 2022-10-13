@@ -3,9 +3,9 @@ namespace Client.Dataclasses;
 public class Hero
 {
     public string name;
-    public PersonalData personalData;
     public Level level;
+    public Species species;
+    public Culture culture;
+    public Profession profession;
     public Attribute attributes;
-    public string species;
-    public List<string> spells;
 }
