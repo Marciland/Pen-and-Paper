@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage NavigationPage.HasNavigationBar="False" NavigationPage.HasBackButton="False" xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Client.Pages.CreateHero.Step7" Title="CreateHero-Step7">
+
+    <ScrollView>
+
+        <VerticalStackLayout Spacing="25" Padding="30,0" VerticalOptions="Center">
+
+            <Label Text="Schritt 7:" HorizontalOptions="Center" FontSize="26" />
+
+            <HorizontalStackLayout Spacing="25" HorizontalOptions="Center">
+
+                <Button Text="Weiter" Clicked="Continue" />
+
+                <Button Text="Zurück" Clicked="Back" />
+
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>
