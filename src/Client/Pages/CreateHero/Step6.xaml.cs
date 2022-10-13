@@ -10,7 +10,7 @@ public partial class Step6
     private readonly Species _species;
     private readonly Level _level;
     private int _attributeCounter = 64; //initially every attribute is 8, which results in an initial value of 8*8=64
-    private int _apSpentOnAttributes = 0;
+    private int _apSpentOnAttributes; //find out how much ap is used to increase attributes and add/remove accordingly
 
     public Step6(Profession profession, Culture culture, Species species, Level level)
     {
@@ -71,7 +71,8 @@ public partial class Step6
         }
         _attributeCounter++;
         MaxAttributes.Text = $"Insgesamt: {_attributeCounter}/{_level.maxAttributeTotal}";
-        //TODO: remove ap cost from budget!
+        int currentAp = _level.apAvailable - _apSpentOnAttributes;
+        ApBudget.Text = $"AP-Konto: {currentAp}";
     }
 
     private void SubAttribute(object sender, EventArgs e)
@@ -114,7 +115,8 @@ public partial class Step6
         }
         _attributeCounter--;
         MaxAttributes.Text = $"Insgesamt: {_attributeCounter}/{_level.maxAttributeTotal}";
-        //TODO: add ap cost to budget!
+        int currentAp = _level.apAvailable - _apSpentOnAttributes;
+        ApBudget.Text = $"AP-Konto: {currentAp}";
     }
 
     [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
