@@ -5,7 +5,9 @@ VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "src\Client\Client.csproj", "{6F849D67-9596-40A9-8C63-74B2FCD6CC13}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.UnitTests", "tests\Client.UnitTests\Client.UnitTests.csproj", "{1C083AFE-6D40-469A-96CF-08567F4D761D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.UnitTests", "tests\Client.UnitTests\Client.UnitTests.csproj", "{1C083AFE-6D40-469A-96CF-08567F4D761D}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Client.E2ETests", "tests\Client.E2ETests\Client.E2ETests.pyproj", "{D33D56A0-3180-4B87-A753-925376F2A7A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +25,10 @@ Global
 		{1C083AFE-6D40-469A-96CF-08567F4D761D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C083AFE-6D40-469A-96CF-08567F4D761D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C083AFE-6D40-469A-96CF-08567F4D761D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D33D56A0-3180-4B87-A753-925376F2A7A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D33D56A0-3180-4B87-A753-925376F2A7A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D33D56A0-3180-4B87-A753-925376F2A7A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D33D56A0-3180-4B87-A753-925376F2A7A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
