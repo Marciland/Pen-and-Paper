@@ -1,5 +1,5 @@
-# Das Schwarze Auge 5 Tools
-Software that provides the ability to create heros based on the dark eye core rules v5.
+# Pen & Paper Toolset
+Software that provides the ability to create/edit heros based on the dark eye core rules v5 with features to support remotely playing pen and paper.
 
 ## This was never meant to be used by anyone except me and my friends.
 \
