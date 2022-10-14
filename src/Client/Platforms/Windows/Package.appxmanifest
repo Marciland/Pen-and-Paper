@@ -5,10 +5,10 @@
   xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
   IgnorableNamespaces="uap rescap">
 
-  <Identity Name="DSA-5" Publisher="CN=Marcel Witoschek" Version="0.0.0.1" />
+  <Identity Name="PnP-Client" Publisher="CN=Marcel Witoschek" Version="0.0.1.1" />
 
   <Properties>
-    <DisplayName>DSA-5</DisplayName>
+    <DisplayName>PnP-Client</DisplayName>
     <PublisherDisplayName>Marcel Witoschek</PublisherDisplayName>
     <Logo>$placeholder$.png</Logo>
   </Properties>
@@ -25,7 +25,7 @@
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="$targetentrypoint$">
       <uap:VisualElements
-        DisplayName="DSA-5"
+        DisplayName="PnP-Client"
         Description="$placeholder$"
         Square150x150Logo="$placeholder$.png"
         Square44x44Logo="$placeholder$.png"

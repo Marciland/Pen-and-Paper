@@ -11,7 +11,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 
 		<ApplicationTitle>Das Schwarze Auge 5 - Client</ApplicationTitle>
-		<ApplicationId>de.marciland.dsa5-client</ApplicationId>
+		<ApplicationId>de.marciland.pnp-client</ApplicationId>
 		<ApplicationIdGuid>ca7b9f2d-b2bd-4227-88b3-8c1311286bb7</ApplicationIdGuid>
 		<ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
 		<ApplicationVersion>1</ApplicationVersion>
