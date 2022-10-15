@@ -13,7 +13,7 @@
 
             <Label Text="Der Erfahrungsgrad bestimmt die Maximalwerte für deine Attribute." HorizontalOptions="Center" FontSize="18" />
 
-            <Label x:Name="MaxAttributes" HorizontalOptions="Center" FontSize="18"/>
+            <Label x:Name="MaxAttributes" HorizontalOptions="Center" FontSize="18" />
 
             <HorizontalStackLayout HorizontalOptions="Center" Spacing="50">
 

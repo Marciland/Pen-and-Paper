@@ -2,12 +2,12 @@ namespace Client.Dataclasses;
 
 public class Attribute
 {
-    public int courage = 0;
-    public int cleverness = 0;
-    public int intuition = 0;
-    public int charisma = 0;
-    public int dexterity = 0;
-    public int agility = 0;
-    public int constitution = 0;
-    public int strength = 0;
+    public int Courage = 0;
+    public int Cleverness = 0;
+    public int Intuition = 0;
+    public int Charisma = 0;
+    public int Dexterity = 0;
+    public int Agility = 0;
+    public int Constitution = 0;
+    public int Strength = 0;
 }

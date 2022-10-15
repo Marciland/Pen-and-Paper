@@ -2,29 +2,29 @@
 {
     public class Species
     {
-        public int type; // 0 = Mensch/Halbelf, 1 = Elf, 2 = Zwerg (used for figuring out if culture is valid)
-        public string name;
-        public int ap;
-        public int le;
-        public int sk;
-        public int zk;
-        public int gs;
-        public string attributes;
-        public List<Perk> perks;
+        public int Type; // 0 = Mensch/Halbelf, 1 = Elf, 2 = Zwerg (used for figuring out if culture is valid)
+        public string Name;
+        public int Ap;
+        public int Le;
+        public int Sk;
+        public int Zk;
+        public int Gs;
+        public string Attributes;
+        public List<Perk> Perks;
 
         public override string ToString()
         {
-            return $"{name} ({ap}AP)";
+            return $"{Name} ({Ap}AP)";
         }
 
         public static List<Species> GetSpecies()
         {
             return new List<Species>
             {
-                new(){ type = 0, name = "Mensch",  ap = 0,  le = 5, sk = -5, zk = -5, gs = 8, attributes = "eine beliebige Eigenschaft +1", perks = new List<Perk>() },
-                new(){ type = 1, name = "Elf",     ap = 18, le = 2, sk = -4, zk = -6, gs = 8, attributes = "IN und GE +1, KL oder KK -2", perks = new List<Perk> { new() { name = "Zauberer"}, new() { name = "Zweistimmiger Gesang"} } },
-                new(){ type = 0, name = "Halbelf", ap = 0,  le = 5, sk = -4, zk = -6, gs = 8, attributes = "eine beliebige Eigenschaft +1", perks = new List<Perk>() },
-                new(){ type = 2, name = "Zwerg",   ap = 61, le = 8, sk = -4, zk = -4, gs = 6, attributes = "KO und KK +1, CH oder GE -2", perks = new List<Perk>() }
+                new(){ Type = 0, Name = "Mensch",  Ap = 0,  Le = 5, Sk = -5, Zk = -5, Gs = 8, Attributes = "eine beliebige Eigenschaft +1", Perks = new List<Perk>() },
+                new(){ Type = 1, Name = "Elf",     Ap = 18, Le = 2, Sk = -4, Zk = -6, Gs = 8, Attributes = "IN und GE +1, KL oder KK -2", Perks = new List<Perk> { new() { name = "Zauberer"}, new() { name = "Zweistimmiger Gesang"} } },
+                new(){ Type = 0, Name = "Halbelf", Ap = 0,  Le = 5, Sk = -4, Zk = -6, Gs = 8, Attributes = "eine beliebige Eigenschaft +1", Perks = new List<Perk>() },
+                new(){ Type = 2, Name = "Zwerg",   Ap = 61, Le = 8, Sk = -4, Zk = -4, Gs = 6, Attributes = "KO und KK +1, CH oder GE -2", Perks = new List<Perk>() }
             };
         }
 

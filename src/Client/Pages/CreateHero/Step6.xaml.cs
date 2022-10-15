@@ -19,59 +19,59 @@ public partial class Step6
         _species = species;
         _level = level;
         InitializeComponent();
-        ApBudget.Text = $"AP-Konto: {_level.apAvailable}";
-        MaxAttributes.Text = $"Insgesamt: {_attributeCounter}/{_level.maxAttributeTotal}";
+        ApBudget.Text = $"AP-Konto: {_level.ApAvailable}";
+        MaxAttributes.Text = $"Insgesamt: {_attributeCounter}/{_level.MaxAttributeTotal}";
     }
 
     private void Continue(object sender, EventArgs e)
     {
-        Level newLevel = new() { name = _level.name, apTotal = _level.apTotal, apAvailable = _level.apAvailable - _apSpentOnAttributes, apSpent = _level.apSpent + _apSpentOnAttributes, maxAttribute = _level.maxAttribute, maxSkill = _level.maxSkill, maxCombatSkill = _level.maxCombatSkill, maxAttributeTotal = _level.maxAttributeTotal, maxSpells = _level.maxSpells, maxForeignSpells = _level.maxForeignSpells };
-        Attribute attributes = new() { courage = int.Parse(CourageLabel.Text), cleverness = int.Parse(ClevernessLabel.Text), intuition = int.Parse(IntuitionLabel.Text), charisma = int.Parse(CharismaLabel.Text), dexterity = int.Parse(DexterityLabel.Text), agility = int.Parse(AgilityLabel.Text), constitution = int.Parse(ConstitutionLabel.Text), strength = int.Parse(StrengthLabel.Text) };
+        Level newLevel = new() { Name = _level.Name, ApTotal = _level.ApTotal, ApAvailable = _level.ApAvailable - _apSpentOnAttributes, ApSpent = _level.ApSpent + _apSpentOnAttributes, MaxAttribute = _level.MaxAttribute, MaxSkill = _level.MaxSkill, MaxCombatSkill = _level.MaxCombatSkill, MaxAttributeTotal = _level.MaxAttributeTotal, MaxSpells = _level.MaxSpells, MaxForeignSpells = _level.MaxForeignSpells };
+        Attribute attributes = new() { Courage = int.Parse(CourageLabel.Text), Cleverness = int.Parse(ClevernessLabel.Text), Intuition = int.Parse(IntuitionLabel.Text), Charisma = int.Parse(CharismaLabel.Text), Dexterity = int.Parse(DexterityLabel.Text), Agility = int.Parse(AgilityLabel.Text), Constitution = int.Parse(ConstitutionLabel.Text), Strength = int.Parse(StrengthLabel.Text) };
         Navigation.PushAsync(new Step7(attributes, _profession, _culture, _species, newLevel));
     }
 
     private void AddAttribute(object sender, EventArgs e)
     {
         Button button = (Button)sender;
-        if (_attributeCounter == _level.maxAttributeTotal) return;
+        if (_attributeCounter == _level.MaxAttributeTotal) return;
         switch (button.ClassId)
         {
             case "CouragePlus":
-                if (int.Parse(CourageLabel.Text) == _level.maxAttribute) return;
+                if (int.Parse(CourageLabel.Text) == _level.MaxAttribute) return;
                 CourageLabel.Text = (int.Parse(CourageLabel.Text) + 1).ToString();
                 break;
             case "ClevernessPlus":
-                if (int.Parse(ClevernessLabel.Text) == _level.maxAttribute) return;
+                if (int.Parse(ClevernessLabel.Text) == _level.MaxAttribute) return;
                 ClevernessLabel.Text = (int.Parse(ClevernessLabel.Text) + 1).ToString();
                 break;
             case "IntuitionPlus":
-                if (int.Parse(IntuitionLabel.Text) == _level.maxAttribute) return;
+                if (int.Parse(IntuitionLabel.Text) == _level.MaxAttribute) return;
                 IntuitionLabel.Text = (int.Parse(IntuitionLabel.Text) + 1).ToString();
                 break;
             case "CharismaPlus":
-                if (int.Parse(CharismaLabel.Text) == _level.maxAttribute) return;
+                if (int.Parse(CharismaLabel.Text) == _level.MaxAttribute) return;
                 CharismaLabel.Text = (int.Parse(CharismaLabel.Text) + 1).ToString();
                 break;
             case "DexterityPlus":
-                if (int.Parse(DexterityLabel.Text) == _level.maxAttribute) return;
+                if (int.Parse(DexterityLabel.Text) == _level.MaxAttribute) return;
                 DexterityLabel.Text = (int.Parse(DexterityLabel.Text) + 1).ToString();
                 break;
             case "AgilityPlus":
-                if (int.Parse(AgilityLabel.Text) == _level.maxAttribute) return;
+                if (int.Parse(AgilityLabel.Text) == _level.MaxAttribute) return;
                 AgilityLabel.Text = (int.Parse(AgilityLabel.Text) + 1).ToString();
                 break;
             case "ConstitutionPlus":
-                if (int.Parse(ConstitutionLabel.Text) == _level.maxAttribute) return;
+                if (int.Parse(ConstitutionLabel.Text) == _level.MaxAttribute) return;
                 ConstitutionLabel.Text = (int.Parse(ConstitutionLabel.Text) + 1).ToString();
                 break;
             case "StrengthPlus":
-                if (int.Parse(StrengthLabel.Text) == _level.maxAttribute) return;
+                if (int.Parse(StrengthLabel.Text) == _level.MaxAttribute) return;
                 StrengthLabel.Text = (int.Parse(StrengthLabel.Text) + 1).ToString();
                 break;
         }
         _attributeCounter++;
-        MaxAttributes.Text = $"Insgesamt: {_attributeCounter}/{_level.maxAttributeTotal}";
-        int currentAp = _level.apAvailable - _apSpentOnAttributes;
+        MaxAttributes.Text = $"Insgesamt: {_attributeCounter}/{_level.MaxAttributeTotal}";
+        int currentAp = _level.ApAvailable - _apSpentOnAttributes;
         ApBudget.Text = $"AP-Konto: {currentAp}";
     }
 
@@ -114,8 +114,8 @@ public partial class Step6
                 break;
         }
         _attributeCounter--;
-        MaxAttributes.Text = $"Insgesamt: {_attributeCounter}/{_level.maxAttributeTotal}";
-        int currentAp = _level.apAvailable - _apSpentOnAttributes;
+        MaxAttributes.Text = $"Insgesamt: {_attributeCounter}/{_level.MaxAttributeTotal}";
+        int currentAp = _level.ApAvailable - _apSpentOnAttributes;
         ApBudget.Text = $"AP-Konto: {currentAp}";
     }
 

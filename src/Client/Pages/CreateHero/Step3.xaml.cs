@@ -10,7 +10,7 @@ public partial class Step3
     {
         _level = level;
         InitializeComponent();
-        ApBudget.Text = $"AP-Konto: {level.apAvailable}";
+        ApBudget.Text = $"AP-Konto: {level.ApAvailable}";
         SpeciesPicker.ItemsSource = Species.GetSpecies();
         SpeciesPicker.SelectedIndex = 0;
     }
@@ -20,16 +20,16 @@ public partial class Step3
         Species selectedSpecies = (Species)SpeciesPicker.SelectedItem;
         Level newLevel = new()
         {
-            name = _level.name,
-            apTotal = _level.apTotal,
-            apAvailable = _level.apAvailable - selectedSpecies.ap,
-            apSpent = _level.apSpent + selectedSpecies.ap,
-            maxAttribute = _level.maxAttribute,
-            maxSkill = _level.maxSkill,
-            maxCombatSkill = _level.maxCombatSkill,
-            maxAttributeTotal = _level.maxAttributeTotal,
-            maxSpells = _level.maxSpells,
-            maxForeignSpells = _level.maxForeignSpells
+            Name = _level.Name,
+            ApTotal = _level.ApTotal,
+            ApAvailable = _level.ApAvailable - selectedSpecies.Ap,
+            ApSpent = _level.ApSpent + selectedSpecies.Ap,
+            MaxAttribute = _level.MaxAttribute,
+            MaxSkill = _level.MaxSkill,
+            MaxCombatSkill = _level.MaxCombatSkill,
+            MaxAttributeTotal = _level.MaxAttributeTotal,
+            MaxSpells = _level.MaxSpells,
+            MaxForeignSpells = _level.MaxForeignSpells
         };
         Navigation.PushAsync(new Step4(selectedSpecies, newLevel));
     }
@@ -40,18 +40,18 @@ public partial class Step3
         if (picker.SelectedIndex == -1) return;
         Species selectedSpecies = (Species)picker.SelectedItem;
 
-        ApBudget.Text = $"AP-Konto: {_level.apAvailable - selectedSpecies.ap}";
-        LeLabel.Text = $"Lebensenergie-Grundwert (LE): {selectedSpecies.le}";
-        SkLabel.Text = $"Seelenkraft-Grundwert (SK): {selectedSpecies.sk}";
-        ZkLabel.Text = $"Zähigkeit-Grundwert (ZK): {selectedSpecies.zk}";
-        GsLabel.Text = $"Geschwindigkeit-Grundwert (GS): {selectedSpecies.gs}";
-        AttributeLabel.Text = selectedSpecies.attributes;
+        ApBudget.Text = $"AP-Konto: {_level.ApAvailable - selectedSpecies.Ap}";
+        LeLabel.Text = $"Lebensenergie-Grundwert (LE): {selectedSpecies.Le}";
+        SkLabel.Text = $"Seelenkraft-Grundwert (SK): {selectedSpecies.Sk}";
+        ZkLabel.Text = $"Zähigkeit-Grundwert (ZK): {selectedSpecies.Zk}";
+        GsLabel.Text = $"Geschwindigkeit-Grundwert (GS): {selectedSpecies.Gs}";
+        AttributeLabel.Text = selectedSpecies.Attributes;
         PerkLabel.Text = "Vorteile: ";
-        foreach (Perk perk in selectedSpecies.perks)
+        foreach (Perk perk in selectedSpecies.Perks)
         {
             PerkLabel.Text += $"{perk.name}, ";
         }
-        PerkLabel.Text = selectedSpecies.perks.Count == 0
+        PerkLabel.Text = selectedSpecies.Perks.Count == 0
             ? PerkLabel.Text + "Keine"
             : PerkLabel.Text.Remove(PerkLabel.Text.Length - 2);
     }
