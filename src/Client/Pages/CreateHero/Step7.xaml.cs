@@ -10,6 +10,8 @@ public partial class Step7
     private Culture _culture;
     private Species _species;
     private Level _level;
+    private int _apSpentOnPerks;
+    private int _apGainedOnFlaws;
 
     public Step7(Attribute attributes, Profession profession, Culture culture, Species species, Level level)
     {
@@ -19,9 +21,23 @@ public partial class Step7
         _species = species;
         _level = level;
 		InitializeComponent();
+        ApBudget.Text = $"AP-Konto: {_level.ApAvailable}";
     }
 
-    [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+    private void OnSelectionChangedPerk(object sender, EventArgs e)
+    {
+        //PerkLabel.Text="_apSpentOnPerks/80"
+        //int currentAp = _level.apAvailable - _apSpentOnPerks + _apGainedOnFlaws
+        //ApBudget.Text=$"AP-Konto: {currentAp}"
+    }
+
+    private void OnSelectionChangedFlaw(object sender, EventArgs e)
+    {
+        //FlawLabel.Text="_apGainedOnFlaws/80"
+        //int currentAp = _level.apAvailable - _apSpentOnPerks + _apGainedOnFlaws
+        //ApBudget.Text=$"AP-Konto: {currentAp}"
+    }
+
     private void Continue(object sender, EventArgs e)
     {
         //step 8

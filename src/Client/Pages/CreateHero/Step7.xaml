@@ -5,7 +5,45 @@
 
         <VerticalStackLayout Spacing="25" Padding="30,0" VerticalOptions="Center">
 
+            <Label x:Name="ApBudget" HorizontalOptions="End" FontSize="20" />
+
             <Label Text="Schritt 7:" HorizontalOptions="Center" FontSize="26" />
+
+            <Label Text="Vor- und Nachteile verdeutlichen die Besonderheiten eines Helden." HorizontalOptions="Center" FontSize="18" />
+
+            <Label Text="Bei der Erstellung des Helden dürfen maximal 80 AP für Vorteile verbaucht und 80 AP für Nachteile erhalten werden." HorizontalOptions="Center" FontSize="18" />
+
+            <Grid RowSpacing="5" ColumnSpacing="10" HorizontalOptions="Center">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Für Vorteile verbleibend:" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" />
+
+                <Label Text="Für Nachteile verbleibend:" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" />
+
+                <CollectionView x:Name="PerkCollection" SelectionChanged="OnSelectionChangedPerk" Grid.Row="1" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="3" />
+
+                <CollectionView x:Name="FlawCollection" SelectionChanged="OnSelectionChangedFlaw" Grid.Row="1" Grid.RowSpan="2" Grid.Column="3" Grid.ColumnSpan="3" />
+
+                <Label x:Name="PerkLabel" Text="0/80" Grid.Row="0" Grid.Column="2" />
+
+                <Label x:Name="FlawLabel" Text="0/80" Grid.Row="0" Grid.Column="5" />
+
+            </Grid>
 
             <HorizontalStackLayout Spacing="25" HorizontalOptions="Center">
 
