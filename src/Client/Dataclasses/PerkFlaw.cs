@@ -20,7 +20,8 @@
             {
                 new (){ Name = "Adel", Level = 1, Description = "Der Held ist angesehen, genießt die Privilegien des Adels und kann vom Meister Erleichterungen zugesprochen bekommen, wenn er gegenüber Rangniedrigeren agiert. Siehe GRW.338", Precondition = "Kultur muss über einen passenden Adel verfügen.", Ap = 5 },
                 new (){ Name = "Adel", Level = 2, Description = "Der Held ist angesehen, genießt die Privilegien des Adels und kann vom Meister Erleichterungen zugesprochen bekommen, wenn er gegenüber Rangniedrigeren agiert. Siehe GRW.338", Precondition = "Kultur muss über einen passenden Adel verfügen.", Ap = 10 },
-                new (){ Name = "Adel", Level = 3, Description = "Der Held ist angesehen, genießt die Privilegien des Adels und kann vom Meister Erleichterungen zugesprochen bekommen, wenn er gegenüber Rangniedrigeren agiert. Siehe GRW.338", Precondition = "Kultur muss über einen passenden Adel verfügen.", Ap = 15 }
+                new (){ Name = "Adel", Level = 3, Description = "Der Held ist angesehen, genießt die Privilegien des Adels und kann vom Meister Erleichterungen zugesprochen bekommen, wenn er gegenüber Rangniedrigeren agiert. Siehe GRW.338", Precondition = "Kultur muss über einen passenden Adel verfügen.", Ap = 15 },
+                new (){ Name = "TestFor80", Level = 0, Description = "bla", Precondition = "blaa", Ap = 80 }
             };
         }
 

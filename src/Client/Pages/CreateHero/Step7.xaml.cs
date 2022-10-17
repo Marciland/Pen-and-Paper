@@ -26,12 +26,26 @@ public partial class Step7
         FlawCollection.ItemsSource = PerkFlaw.GetFlaws();
     }
 
-    private void OnSelectionChangedPerk(object sender, EventArgs e)
+    private void OnSelectionChangedPerk(object sender, SelectionChangedEventArgs e)
     {
-        //TODO check if selection is made or undone
-        CollectionView selection = (CollectionView) sender;
-        PerkFlaw perk = (PerkFlaw) selection.SelectedItem; //returns null!!!! TODO fix
-        _apSpentOnPerks += perk.Ap; //TODO check if maximum would be hit
+        IEnumerable<PerkFlaw> current = e.CurrentSelection.Cast<PerkFlaw>();
+        _apSpentOnPerks = 0;
+        foreach (PerkFlaw perk in current)
+        {
+            _apSpentOnPerks += perk.Ap;
+        }
+
+        if (_apSpentOnPerks > 80)
+        {
+            //PerkCollection.UpdateSelectedItems(e.PreviousSelection.ToList()); //TODO this does not work properly.
+            //PerkCollection.SelectedItems = e.PreviousSelection.ToList();      //TODO this also does not work! 
+            _apSpentOnPerks = 0;
+            foreach (PerkFlaw perk in e.PreviousSelection.Cast<PerkFlaw>())
+            {
+                _apSpentOnPerks += perk.Ap;
+            }
+            return;
+        }
         PerkLabel.Text = $"{_apSpentOnPerks}/80";
         int currentAp = _level.ApAvailable - _apSpentOnPerks + _apGainedOnFlaws;
         ApBudget.Text = $"AP-Konto: {currentAp}";
