@@ -28,9 +28,13 @@ public partial class Step7
 
     private void OnSelectionChangedPerk(object sender, EventArgs e)
     {
-        //PerkLabel.Text="_apSpentOnPerks/80"
-        //int currentAp = _level.apAvailable - _apSpentOnPerks + _apGainedOnFlaws
-        //ApBudget.Text=$"AP-Konto: {currentAp}"
+        //TODO check if selection is made or undone
+        CollectionView selection = (CollectionView) sender;
+        PerkFlaw perk = (PerkFlaw) selection.SelectedItem; //returns null!!!! TODO fix
+        _apSpentOnPerks += perk.Ap; //TODO check if maximum would be hit
+        PerkLabel.Text = $"{_apSpentOnPerks}/80";
+        int currentAp = _level.ApAvailable - _apSpentOnPerks + _apGainedOnFlaws;
+        ApBudget.Text = $"AP-Konto: {currentAp}";
     }
 
     private void OnSelectionChangedFlaw(object sender, EventArgs e)
