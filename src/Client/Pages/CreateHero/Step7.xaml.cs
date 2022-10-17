@@ -22,6 +22,8 @@ public partial class Step7
         _level = level;
 		InitializeComponent();
         ApBudget.Text = $"AP-Konto: {_level.ApAvailable}";
+        PerkCollection.ItemsSource = PerkFlaw.GetPerks();
+        FlawCollection.ItemsSource = PerkFlaw.GetFlaws();
     }
 
     private void OnSelectionChangedPerk(object sender, EventArgs e)

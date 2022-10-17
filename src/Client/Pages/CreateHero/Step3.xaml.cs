@@ -47,9 +47,9 @@ public partial class Step3
         GsLabel.Text = $"Geschwindigkeit-Grundwert (GS): {selectedSpecies.Gs}";
         AttributeLabel.Text = selectedSpecies.Attributes;
         PerkLabel.Text = "Vorteile: ";
-        foreach (Perk perk in selectedSpecies.Perks)
+        foreach (PerkFlaw perk in selectedSpecies.Perks)
         {
-            PerkLabel.Text += $"{perk.name}, ";
+            PerkLabel.Text += $"{perk.Name}, ";
         }
         PerkLabel.Text = selectedSpecies.Perks.Count == 0
             ? PerkLabel.Text + "Keine"
