@@ -5,11 +5,11 @@ namespace Client.Pages.CreateHero;
 
 public partial class Step7
 {
-    private Attribute _attributes;
-    private Profession _profession;
-    private Culture _culture;
-    private Species _species;
-    private Level _level;
+    private readonly Attribute _attributes;
+    private readonly Profession _profession;
+    private readonly Culture _culture;
+    private readonly Species _species;
+    private readonly Level _level;
     private int _apSpentOnPerks;
     private int _apGainedOnFlaws;
 
@@ -28,17 +28,18 @@ public partial class Step7
 
     private void OnSelectionChangedPerk(object sender, SelectionChangedEventArgs e)
     {
+        //TODO add a multi-pre selection based on species (elf has 2 perks already) and figure out if they count towards the limit
         IEnumerable<PerkFlaw> current = e.CurrentSelection.Cast<PerkFlaw>();
         _apSpentOnPerks = 0;
         foreach (PerkFlaw perk in current)
         {
             _apSpentOnPerks += perk.Ap;
         }
-
         if (_apSpentOnPerks > 80)
         {
-            //PerkCollection.UpdateSelectedItems(e.PreviousSelection.ToList()); //TODO this does not work properly.
-            //PerkCollection.SelectedItems = e.PreviousSelection.ToList();      //TODO this also does not work! 
+            //TODO undo last selection if maximum is reached, possible solution: compare to previous and bind difference (new selection) to null
+            //PerkCollection.UpdateSelectedItems(e.PreviousSelection.ToList());
+            //PerkCollection.SelectedItems = e.PreviousSelection.ToList();
             _apSpentOnPerks = 0;
             foreach (PerkFlaw perk in e.PreviousSelection.Cast<PerkFlaw>())
             {
