@@ -26,7 +26,6 @@
             new PerkFlaw(){ Name = "Arm", Level = 3, Description = "Durch den Nachteil Arm erhält ein Held bei der Erstellung 250 Silbertaler weniger pro Stufe.", Precondition = "kein Vorteil Reich", Ap = 3}
         };
 
-
         public override string ToString()
         {
             return $"{Name} ({Ap}AP)";

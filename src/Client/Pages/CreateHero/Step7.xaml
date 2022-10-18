@@ -35,29 +35,9 @@
 
                 <Label Text="Für Nachteile verbleibend:" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" />
 
-                <CollectionView x:Name="PerkCollection" SelectionMode="Multiple" SelectionChanged="OnSelectionChangedPerk" Grid.Row="1" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="3">
+                <CollectionView x:Name="PerkCollection" SelectionMode="Multiple" SelectionChanged="OnSelectionChangedPerk" Grid.Row="1" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="3" />
 
-                    <CollectionView.ItemTemplate>
-
-                        <DataTemplate>
-                            <!--TODO add template-->
-                        </DataTemplate>
-
-                    </CollectionView.ItemTemplate>
-
-                </CollectionView>
-
-                <CollectionView x:Name="FlawCollection" SelectionMode="Multiple" SelectionChanged="OnSelectionChangedFlaw" Grid.Row="1" Grid.RowSpan="2" Grid.Column="3" Grid.ColumnSpan="3">
-
-                    <CollectionView.ItemTemplate>
-
-                        <DataTemplate>
-                            <!--TODO add template-->
-                        </DataTemplate>
-
-                    </CollectionView.ItemTemplate>
-
-                </CollectionView>
+                <CollectionView x:Name="FlawCollection" SelectionMode="Multiple" SelectionChanged="OnSelectionChangedFlaw" Grid.Row="1" Grid.RowSpan="2" Grid.Column="3" Grid.ColumnSpan="3" />
 
                 <Label x:Name="PerkLabel" Text="0/80" Grid.Row="0" Grid.Column="2" />
 
