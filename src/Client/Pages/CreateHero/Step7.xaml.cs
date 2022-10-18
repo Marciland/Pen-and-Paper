@@ -22,13 +22,14 @@ public partial class Step7
         _level = level;
 		InitializeComponent();
         ApBudget.Text = $"AP-Konto: {_level.ApAvailable}";
-        PerkCollection.ItemsSource = PerkFlaw.GetPerks();
-        FlawCollection.ItemsSource = PerkFlaw.GetFlaws();
+        PerkCollection.ItemsSource = PerkFlaw.GetAllPerks();
+        FlawCollection.ItemsSource = PerkFlaw.GetAllFlaws();
+        // TODO add a multi - pre selection based on species(elf has 2 perks already) and figure out if they count towards the limit
     }
 
     private void OnSelectionChangedPerk(object sender, SelectionChangedEventArgs e)
     {
-        //TODO add a multi-pre selection based on species (elf has 2 perks already) and figure out if they count towards the limit
+        IEnumerable<PerkFlaw> previous = e.PreviousSelection.Cast<PerkFlaw>();
         IEnumerable<PerkFlaw> current = e.CurrentSelection.Cast<PerkFlaw>();
         _apSpentOnPerks = 0;
         foreach (PerkFlaw perk in current)
@@ -37,11 +38,12 @@ public partial class Step7
         }
         if (_apSpentOnPerks > 80)
         {
-            //TODO undo last selection if maximum is reached, possible solution: compare to previous and bind difference (new selection) to null
+            //https://github.com/dotnet/maui/issues/10595
             //PerkCollection.UpdateSelectedItems(e.PreviousSelection.ToList());
             //PerkCollection.SelectedItems = e.PreviousSelection.ToList();
+            //PerkCollection.SelectedItems.Remove(PerkCollection.SelectedItems.Count - 1);
             _apSpentOnPerks = 0;
-            foreach (PerkFlaw perk in e.PreviousSelection.Cast<PerkFlaw>())
+            foreach (PerkFlaw perk in previous)
             {
                 _apSpentOnPerks += perk.Ap;
             }
@@ -52,11 +54,31 @@ public partial class Step7
         ApBudget.Text = $"AP-Konto: {currentAp}";
     }
 
-    private void OnSelectionChangedFlaw(object sender, EventArgs e)
+    private void OnSelectionChangedFlaw(object sender, SelectionChangedEventArgs e)
     {
-        //FlawLabel.Text="_apGainedOnFlaws/80"
-        //int currentAp = _level.apAvailable - _apSpentOnPerks + _apGainedOnFlaws
-        //ApBudget.Text=$"AP-Konto: {currentAp}"
+        IEnumerable<PerkFlaw> previous = e.PreviousSelection.Cast<PerkFlaw>();
+        IEnumerable<PerkFlaw> current = e.CurrentSelection.Cast<PerkFlaw>();
+        _apGainedOnFlaws = 0;
+        foreach (PerkFlaw flaw in current)
+        {
+            _apGainedOnFlaws += flaw.Ap;
+        }
+        if (_apGainedOnFlaws > 80)
+        {
+            //https://github.com/dotnet/maui/issues/10595
+            //PerkCollection.UpdateSelectedItems(e.PreviousSelection.ToList());
+            //PerkCollection.SelectedItems = e.PreviousSelection.ToList();
+            //PerkCollection.SelectedItems.Remove(PerkCollection.SelectedItems.Count - 1);
+            _apGainedOnFlaws = 0;
+            foreach (PerkFlaw perk in previous)
+            {
+                _apGainedOnFlaws += perk.Ap;
+            }
+            return;
+        }
+        FlawLabel.Text = $"{_apGainedOnFlaws}/80";
+        int currentAp = _level.ApAvailable - _apSpentOnPerks + _apGainedOnFlaws;
+        ApBudget.Text = $"AP-Konto: {currentAp}";
     }
 
     private void Continue(object sender, EventArgs e)
