@@ -20,7 +20,7 @@ public partial class Step7
         _culture = culture;
         _species = species;
         _level = level;
-		InitializeComponent();
+        InitializeComponent();
         ApBudget.Text = $"AP-Konto: {_level.ApAvailable}";
         PerkCollection.ItemsSource = PerkFlaw.GetAllPerks();
         FlawCollection.ItemsSource = PerkFlaw.GetAllFlaws();
@@ -38,10 +38,7 @@ public partial class Step7
         }
         if (_apSpentOnPerks > 80)
         {
-            //https://github.com/dotnet/maui/issues/10595
-            //PerkCollection.UpdateSelectedItems(e.PreviousSelection.ToList());
-            //PerkCollection.SelectedItems = e.PreviousSelection.ToList();
-            //PerkCollection.SelectedItems.Remove(PerkCollection.SelectedItems.Count - 1);
+            PerkCollection.UpdateSelectedItems(e.PreviousSelection.ToList());
             _apSpentOnPerks = 0;
             foreach (PerkFlaw perk in previous)
             {
@@ -65,10 +62,7 @@ public partial class Step7
         }
         if (_apGainedOnFlaws > 80)
         {
-            //https://github.com/dotnet/maui/issues/10595
-            //PerkCollection.UpdateSelectedItems(e.PreviousSelection.ToList());
-            //PerkCollection.SelectedItems = e.PreviousSelection.ToList();
-            //PerkCollection.SelectedItems.Remove(PerkCollection.SelectedItems.Count - 1);
+            FlawCollection.UpdateSelectedItems(e.PreviousSelection.ToList());
             _apGainedOnFlaws = 0;
             foreach (PerkFlaw perk in previous)
             {
@@ -83,7 +77,8 @@ public partial class Step7
 
     private void Continue(object sender, EventArgs e)
     {
-        //step 8
+        Level newLevel = new() { Name = _level.Name, ApTotal = _level.ApTotal, ApAvailable = _level.ApAvailable - _apSpentOnPerks + _apGainedOnFlaws, ApSpent = _level.ApSpent + _apSpentOnPerks - _apGainedOnFlaws, MaxAttribute = _level.MaxAttribute, MaxSkill = _level.MaxSkill, MaxCombatSkill = _level.MaxCombatSkill, MaxAttributeTotal = _level.MaxAttributeTotal, MaxSpells = _level.MaxSpells, MaxForeignSpells = _level.MaxForeignSpells };
+        Navigation.PushAsync(new Step8(PerkCollection.SelectedItems.Cast<PerkFlaw>().ToList(), FlawCollection.SelectedItems.Cast<PerkFlaw>().ToList(), _attributes, _profession, _culture, _species, newLevel));
     }
 
     [System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
